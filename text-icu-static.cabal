@@ -1,0 +1,16 @@
+name:                text-icu-static
+version:             0.1.0.0
+synopsis:            Example of text-icu static executable
+homepage:            https://github.com/4e6/text-icu-static
+license:             MIT
+license-file:        LICENSE
+author:              Dmitry Bushev
+maintainer:          bushevdv@gmail.com
+build-type:          Simple
+extra-source-files:  ChangeLog.md
+cabal-version:       >=1.10
+
+executable text-icu-static
+  main-is:             Main.hs
+  build-depends:       base >=4.11 && <4.12
+  default-language:    Haskell2010
