@@ -10,7 +10,9 @@ build-type:          Simple
 extra-source-files:  ChangeLog.md
 cabal-version:       >=1.10
 
-executable text-icu-static
-  main-is:             Main.hs
+executable text-icu-normalize
+  main-is:             Normalize.hs
   build-depends:       base >=4.11 && <4.12
+                     , text >1.2 && <2
+                     , text-icu >0.7 && <1
   default-language:    Haskell2010
