@@ -1,7 +1,7 @@
-name:                text-icu-static
+name:                text-icu-static-example
 version:             0.1.0.0
 synopsis:            Example of text-icu static executable
-homepage:            https://github.com/4e6/text-icu-static
+homepage:            https://github.com/4e6/text-icu-static-example
 license:             MIT
 license-file:        LICENSE
 author:              Dmitry Bushev
@@ -12,7 +12,8 @@ cabal-version:       >=1.10
 
 executable text-icu-normalize
   main-is:             Normalize.hs
-  build-depends:       base >=4.11 && <4.12
+  build-depends:       base >=4.10 && <5
                      , text >1.2 && <2
                      , text-icu >0.7 && <1
   default-language:    Haskell2010
+  ghc-options:        -Wall

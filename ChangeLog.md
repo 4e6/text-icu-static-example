@@ -1,4 +1,4 @@
-# Revision history for text-icu-static
+# Revision history for text-icu-static-example
 
 ## 0.1.0.0  -- YYYY-mm-dd
 
