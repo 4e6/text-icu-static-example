@@ -6,8 +6,6 @@
 let
   inherit (nixpkgs) pkgs;
 
-  stdenv6 = pkgs.overrideCC pkgs.stdenv pkgs.gcc6;
-
   # http://userguide.icu-project.org/packaging#TOC-Link-to-ICU-statically
   icu-static = pkgs.icu.overrideAttrs (attrs: {
     dontDisableStatic = true;
@@ -19,7 +17,7 @@ let
     '' + (attrs.postInstall or "");
   });
 
-in stdenv6.mkDerivation {
+in pkgs.stdenv.mkDerivation {
   name = "test-0.1";
   src = ./.;
 

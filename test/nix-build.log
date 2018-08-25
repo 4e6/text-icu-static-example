@@ -1,23 +1,23 @@
 these derivations will be built:
-  /nix/store/p06ym37j7swfsabzbfnp33ws2gplh02l-test-0.1.drv
-building '/nix/store/p06ym37j7swfsabzbfnp33ws2gplh02l-test-0.1.drv'...
+  /nix/store/0g9maik224mz3svbpqwjz4x5fd75lr6g-test-0.1.drv
+building '/nix/store/0g9maik224mz3svbpqwjz4x5fd75lr6g-test-0.1.drv'...
 unpacking sources
-unpacking source archive /nix/store/8v3kiij5n31z6mr6g3afvld32czbl1ds-test
+unpacking source archive /nix/store/m6g5dzdc1vbgg16agxdwq2m2jlj4fmrj-test
 source root is test
 patching sources
 configuring
 fixing cmake files...
-cmake flags: -DCMAKE_BUILD_TYPE=Release -DCMAKE_SKIP_BUILD_RPATH=ON -DCMAKE_INSTALL_INCLUDEDIR=/nix/store/jw725mwgwk2sh4588crfiyjn94rcpllb-test-0.1/include -DCMAKE_INSTALL_LIBDIR=/nix/store/jw725mwgwk2sh4588crfiyjn94rcpllb-test-0.1/lib -DCMAKE_INSTALL_NAME_DIR=/nix/store/jw725mwgwk2sh4588crfiyjn94rcpllb-test-0.1/lib -DCMAKE_INSTALL_PREFIX=/nix/store/jw725mwgwk2sh4588crfiyjn94rcpllb-test-0.1  
--- The C compiler identification is GNU 6.4.0
--- The CXX compiler identification is GNU 6.4.0
--- Check for working C compiler: /nix/store/986psj0symklcn5pkh0kdaxm6qlycdl1-gcc-wrapper-6.4.0/bin/gcc
--- Check for working C compiler: /nix/store/986psj0symklcn5pkh0kdaxm6qlycdl1-gcc-wrapper-6.4.0/bin/gcc -- works
+cmake flags: -DCMAKE_BUILD_TYPE=Release -DCMAKE_SKIP_BUILD_RPATH=ON -DCMAKE_INSTALL_INCLUDEDIR=/nix/store/jf7079p5dinshcxa2ksgh3dvfs8dfkv7-test-0.1/include -DCMAKE_INSTALL_LIBDIR=/nix/store/jf7079p5dinshcxa2ksgh3dvfs8dfkv7-test-0.1/lib -DCMAKE_INSTALL_NAME_DIR=/nix/store/jf7079p5dinshcxa2ksgh3dvfs8dfkv7-test-0.1/lib -DCMAKE_INSTALL_PREFIX=/nix/store/jf7079p5dinshcxa2ksgh3dvfs8dfkv7-test-0.1  
+-- The C compiler identification is GNU 7.3.0
+-- The CXX compiler identification is GNU 7.3.0
+-- Check for working C compiler: /nix/store/9y2f87qb1djmpjs1gxl6smfkpl581waa-gcc-wrapper-7.3.0/bin/gcc
+-- Check for working C compiler: /nix/store/9y2f87qb1djmpjs1gxl6smfkpl581waa-gcc-wrapper-7.3.0/bin/gcc -- works
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
 -- Detecting C compile features
 -- Detecting C compile features - done
--- Check for working CXX compiler: /nix/store/986psj0symklcn5pkh0kdaxm6qlycdl1-gcc-wrapper-6.4.0/bin/g++
--- Check for working CXX compiler: /nix/store/986psj0symklcn5pkh0kdaxm6qlycdl1-gcc-wrapper-6.4.0/bin/g++ -- works
+-- Check for working CXX compiler: /nix/store/9y2f87qb1djmpjs1gxl6smfkpl581waa-gcc-wrapper-7.3.0/bin/g++
+-- Check for working CXX compiler: /nix/store/9y2f87qb1djmpjs1gxl6smfkpl581waa-gcc-wrapper-7.3.0/bin/g++ -- works
 -- Detecting CXX compiler ABI info
 -- Detecting CXX compiler ABI info - done
 -- Detecting CXX compile features
@@ -55,14 +55,14 @@ make[2]: Leaving directory '/tmp/nix-build-test-0.1.drv-1/test/build'
 make -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/build
 make[2]: Entering directory '/tmp/nix-build-test-0.1.drv-1/test/build'
 [ 50%] Building C object CMakeFiles/Test.dir/test.c.o
-/nix/store/986psj0symklcn5pkh0kdaxm6qlycdl1-gcc-wrapper-6.4.0/bin/gcc   -O3 -DNDEBUG   -o CMakeFiles/Test.dir/test.c.o   -c /tmp/nix-build-test-0.1.drv-1/test/test.c
+/nix/store/9y2f87qb1djmpjs1gxl6smfkpl581waa-gcc-wrapper-7.3.0/bin/gcc   -O3 -DNDEBUG   -o CMakeFiles/Test.dir/test.c.o   -c /tmp/nix-build-test-0.1.drv-1/test/test.c
 /tmp/nix-build-test-0.1.drv-1/test/test.c: In function 'main':
 /tmp/nix-build-test-0.1.drv-1/test/test.c:12:5: warning: ignoring return value of 'fgets', declared with attribute warn_unused_result [-Wunused-result]
      fgets(buffer, BUFFERSIZE, stdin);
      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 [100%] Linking C executable Test
 /nix/store/phaailyppsi3wpz4k2zqwmn971i6cr32-cmake-3.10.2/bin/cmake -E cmake_link_script CMakeFiles/Test.dir/link.txt --verbose=1
-/nix/store/986psj0symklcn5pkh0kdaxm6qlycdl1-gcc-wrapper-6.4.0/bin/gcc -O3 -DNDEBUG   CMakeFiles/Test.dir/test.c.o  -o Test /nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicudata.a /nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a /nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuio.a /nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a -static -pthread -licuio -licui18n -licuuc -licudata -lpthread -ldl -lm -lstdc++ 
+/nix/store/9y2f87qb1djmpjs1gxl6smfkpl581waa-gcc-wrapper-7.3.0/bin/gcc -O3 -DNDEBUG   CMakeFiles/Test.dir/test.c.o  -o Test /nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicudata.a /nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a /nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuio.a /nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a -static -pthread -licuio -licui18n -licuuc -licudata -lpthread -ldl -lm -lstdc++ 
 /nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(putil.ao): In function `uprv_dl_open_59':
 (.text+0x1c52): warning: Using 'dlopen' in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
 make[2]: Leaving directory '/tmp/nix-build-test-0.1.drv-1/test/build'
@@ -93,13 +93,13 @@ make[1]: Leaving directory '/tmp/nix-build-test-0.1.drv-1/test/build'
 Install the project...
 /nix/store/phaailyppsi3wpz4k2zqwmn971i6cr32-cmake-3.10.2/bin/cmake -P cmake_install.cmake
 -- Install configuration: "Release"
--- Installing: /nix/store/jw725mwgwk2sh4588crfiyjn94rcpllb-test-0.1/bin/Test
+-- Installing: /nix/store/jf7079p5dinshcxa2ksgh3dvfs8dfkv7-test-0.1/bin/Test
 post-installation fixup
-shrinking RPATHs of ELF executables and libraries in /nix/store/jw725mwgwk2sh4588crfiyjn94rcpllb-test-0.1
-shrinking /nix/store/jw725mwgwk2sh4588crfiyjn94rcpllb-test-0.1/bin/Test
+shrinking RPATHs of ELF executables and libraries in /nix/store/jf7079p5dinshcxa2ksgh3dvfs8dfkv7-test-0.1
+shrinking /nix/store/jf7079p5dinshcxa2ksgh3dvfs8dfkv7-test-0.1/bin/Test
 cannot find section .dynamic
 strip is /nix/store/k8b9hqv58dd1z0j4ikak24ykndcm91s6-binutils-2.28.1/bin/strip
-stripping (with command strip and flags -S) in /nix/store/jw725mwgwk2sh4588crfiyjn94rcpllb-test-0.1/bin 
-patching script interpreter paths in /nix/store/jw725mwgwk2sh4588crfiyjn94rcpllb-test-0.1
-checking for references to /tmp/nix-build-test-0.1.drv-1 in /nix/store/jw725mwgwk2sh4588crfiyjn94rcpllb-test-0.1...
+stripping (with command strip and flags -S) in /nix/store/jf7079p5dinshcxa2ksgh3dvfs8dfkv7-test-0.1/bin 
+patching script interpreter paths in /nix/store/jf7079p5dinshcxa2ksgh3dvfs8dfkv7-test-0.1
+checking for references to /tmp/nix-build-test-0.1.drv-1 in /nix/store/jf7079p5dinshcxa2ksgh3dvfs8dfkv7-test-0.1...
 cannot find section .dynamic
