@@ -1,4 +1,4 @@
-{ nixpkgs ? import <nixpkgs> {}, compiler ? "default", doBenchmark ? false }:
+{ nixpkgs ? import <nixpkgs> {}, compiler ? "ghc843", doBenchmark ? false }:
 
 let
 
@@ -25,12 +25,28 @@ let
         enableSharedLibraries = false;
         enableSharedExecutables = false;
         configureFlags = [
+          "--ghc-option=-v"
           "--ghc-option=-optl=-static"
           "--ghc-option=-optl=-pthread"
           "--ghc-option=-optl=-L${pkgs.glibc.static}/lib"
           "--ghc-option=-optl=-L${pkgs.gmp6.override { withStatic = true; }}/lib"
           "--ghc-option=-optl=-L${icu-static.static}/lib"
+          "--ghc-option=-optl=-licui18n"
+          "--ghc-option=-optl=-licuio"
+          "--ghc-option=-optl=-licuuc"
+          "--ghc-option=-optl=-licudata"
+          "--ghc-option=-optl=-ldl"
+          "--ghc-option=-optl=-lm"
+          "--ghc-option=-optl=-lstdc++"
+          "--ghc-option=-licui18n"
+          "--ghc-option=-licuio"
+          "--ghc-option=-licuuc"
+          "--ghc-option=-licudata"
+          "--ghc-option=-ldl"
+          "--ghc-option=-lm"
+          "--ghc-option=-lstdc++"
         ];
+        #librarySystemDepends = [ icu-static.static ];
         executableHaskellDepends = [ base text text-icu ];
         homepage = "https://github.com/4e6/text-icu-static-example";
         description = "Example of text-icu static executable";
@@ -41,9 +57,41 @@ let
                        then pkgs.haskellPackages
                        else pkgs.haskell.packages.${compiler};
 
+  haskellPackagesOverride = haskellPackages.override {
+    overrides = self: super: {
+      text-icu = pkgs.haskell.lib.overrideCabal super.text-icu (args: {
+        isLibrary = true;
+        isExecutable = false;
+        enableSharedLibraries = false;
+        enableSharedExecutables = false;
+        configureFlags = (args.configureFlags or []) ++ [
+          "--ghc-option=-optl=-static"
+          "--ghc-option=-optl=-pthread"
+          "--ghc-option=-optl=-L${pkgs.glibc.static}/lib"
+          "--ghc-option=-optl=-L${pkgs.gmp6.override { withStatic = true; }}/lib"
+          "--ghc-option=-optl=-licui18n"
+          "--ghc-option=-optl=-licuio"
+          "--ghc-option=-optl=-licuuc"
+          "--ghc-option=-optl=-licudata"
+          "--ghc-option=-optl=-ldl"
+          "--ghc-option=-optl=-lm"
+          "--ghc-option=-optl=-lstdc++"
+          "--ghc-option=-licui18n"
+          "--ghc-option=-licuio"
+          "--ghc-option=-licuuc"
+          "--ghc-option=-licudata"
+          "--ghc-option=-ldl"
+          "--ghc-option=-lm"
+          "--ghc-option=-lstdc++"
+        ];
+        librarySystemDepends = [ icu-static.dev icu-static.static ];
+      });
+    };
+  };
+
   variant = if doBenchmark then pkgs.haskell.lib.doBenchmark else pkgs.lib.id;
 
-  drv = variant (haskellPackages.callPackage f {});
+  drv = variant (haskellPackagesOverride.callPackage f {});
 
 in
 
