@@ -1,0 +1,1008 @@
+these derivations will be built:
+  /nix/store/lrqq1lrffp0shq3cnfsxij0d7aq2rw3w-text-icu-static-example-0.1.0.0.drv
+building '/nix/store/lrqq1lrffp0shq3cnfsxij0d7aq2rw3w-text-icu-static-example-0.1.0.0.drv'...
+setupCompilerEnvironmentPhase
+Build with /nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3.
+ignoring (possibly broken) abi-depends field for packages
+unpacking sources
+unpacking source archive /nix/store/cslp1l6kvf8b36baxg3jy9b4f9x0nhbv-text-icu-static-example
+source root is text-icu-static-example
+patching sources
+compileBuildDriverPhase
+setupCompileFlags: -package-db=/tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/package.conf.d -j4 -threaded
+[1 of 1] Compiling Main             ( Setup.hs, /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/Main.o )
+Linking Setup ...
+configuring
+configureFlags: --verbose --prefix=/nix/store/sbmbcz59y34sqbyl9ksasqy23camcg0x-text-icu-static-example-0.1.0.0 --libdir=$prefix/lib/$compiler --libsubdir=$pkgid --docdir=/nix/store/88iy13ff60lghb1dr4qmlmx8m8z7h8k8-text-icu-static-example-0.1.0.0-doc/share/doc --with-gcc=gcc --package-db=/tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/package.conf.d --ghc-option=-j4 --disable-split-objs --disable-library-profiling --disable-profiling --disable-shared --disable-coverage --enable-library-vanilla --disable-executable-dynamic --enable-tests --ghc-option=-split-sections --ghc-option=-v --ghc-option=-optl=-static --ghc-option=-optl=-pthread --ghc-option=-optl=-L/nix/store/m9qzh7zv0pvkarprpda5zy68myq43iqs-glibc-2.26-131-static/lib --ghc-option=-optl=-L/nix/store/p5b8ashcchqzwlv1vcbzq98cqmfmvfky-gmp-6.1.2/lib --ghc-option=-optl=-L/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib --ghc-option=-optl=-licui18n --ghc-option=-optl=-licuio --ghc-option=-optl=-licuuc --ghc-option=-optl=-licudata --ghc-option=-optl=-ldl --ghc-option=-optl=-lm --ghc-option=-optl=-lstdc++ --ghc-option=-licui18n --ghc-option=-licuio --ghc-option=-licuuc --ghc-option=-licudata --ghc-option=-ldl --ghc-option=-lm --ghc-option=-lstdc++ --extra-lib-dirs=/nix/store/54cwjh1lsmjpk2cbs43gw89w4zhk3ybb-ncurses-6.0-20171125/lib --extra-lib-dirs=/nix/store/wc2ll61lypsv9yig6mvy73c0lw1dp15a-gmp-6.1.2/lib --extra-lib-dirs=/nix/store/54cwjh1lsmjpk2cbs43gw89w4zhk3ybb-ncurses-6.0-20171125/lib
+Using Parsec parser
+Configuring text-icu-static-example-0.1.0.0...
+Dependency base >=4.10 && <5: using base-4.11.1.0
+Dependency text >1.2 && <2: using text-1.2.3.0
+Dependency text-icu >0.7 && <1: using text-icu-0.7.0.1
+Glasgow Haskell Compiler, Version 8.4.3, stage 2 booted by GHC version 8.2.1
+Using binary package database: /nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/package.conf.d/package.cache
+package flags []
+loading package database /nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/package.conf.d
+wired-in package ghc-prim mapped to ghc-prim-0.5.2.0
+wired-in package integer-gmp mapped to integer-gmp-1.0.2.0
+wired-in package base mapped to base-4.11.1.0
+wired-in package rts mapped to rts
+wired-in package template-haskell mapped to template-haskell-2.13.0.0
+wired-in package ghc mapped to ghc-8.4.3
+wired-in package dph-seq not found.
+wired-in package dph-par not found.
+Created temporary directory: /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13852_0
+*** C Compiler:
+/nix/store/9y2f87qb1djmpjs1gxl6smfkpl581waa-gcc-wrapper-7.3.0/bin/cc -fno-stack-protector -DTABLES_NEXT_TO_CODE -x c /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/13810-0.c -o /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13852_0/ghc_1.s -no-pie -Wimplicit -S -include /nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/include/ghcversion.h -I/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/base-4.11.1.0/include -I/nix/store/0cra95pqdhh33wi730bnc0mq2jwixlrr-gmp-6.1.2-dev/include -I/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/integer-gmp-1.0.2.0/include -I/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/include
+*** Assembler:
+/nix/store/9y2f87qb1djmpjs1gxl6smfkpl581waa-gcc-wrapper-7.3.0/bin/cc -fno-stack-protector -DTABLES_NEXT_TO_CODE -no-pie -x assembler -c /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13852_0/ghc_1.s -o /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/13810-1.o
+*** Deleting temp files:
+Deleting: /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13852_0/ghc_1.s /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13852_0/ghc_2.rsp
+*** Deleting temp dirs:
+Deleting: /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13852_0
+Source component graph: component exe:text-icu-normalize
+Configured component graph:
+    component text-icu-static-example-0.1.0.0-ClrtcFp6xcr4KgxfaeH7PX-text-icu-normalize
+        include base-4.11.1.0
+        include text-1.2.3.0
+        include text-icu-0.7.0.1-GQ0DM6OBTErByT1EmU06SY
+Linked component graph:
+    unit text-icu-static-example-0.1.0.0-ClrtcFp6xcr4KgxfaeH7PX-text-icu-normalize
+        include base-4.11.1.0
+        include text-1.2.3.0
+        include text-icu-0.7.0.1-GQ0DM6OBTErByT1EmU06SY
+Ready component graph:
+    definite text-icu-static-example-0.1.0.0-ClrtcFp6xcr4KgxfaeH7PX-text-icu-normalize
+        depends base-4.11.1.0
+        depends text-1.2.3.0
+        depends text-icu-0.7.0.1-GQ0DM6OBTErByT1EmU06SY
+Using Cabal-2.2.0.1 compiled by ghc-8.4
+Using compiler: ghc-8.4.3
+Using install prefix:
+/nix/store/sbmbcz59y34sqbyl9ksasqy23camcg0x-text-icu-static-example-0.1.0.0
+Executables installed in:
+/nix/store/sbmbcz59y34sqbyl9ksasqy23camcg0x-text-icu-static-example-0.1.0.0/bin
+Libraries installed in:
+/nix/store/sbmbcz59y34sqbyl9ksasqy23camcg0x-text-icu-static-example-0.1.0.0/lib/ghc-8.4.3/text-icu-static-example-0.1.0.0
+Dynamic Libraries installed in:
+/nix/store/sbmbcz59y34sqbyl9ksasqy23camcg0x-text-icu-static-example-0.1.0.0/lib/ghc-8.4.3/x86_64-linux-ghc-8.4.3
+Private executables installed in:
+/nix/store/sbmbcz59y34sqbyl9ksasqy23camcg0x-text-icu-static-example-0.1.0.0/libexec/x86_64-linux-ghc-8.4.3/text-icu-static-example-0.1.0.0
+Data files installed in:
+/nix/store/sbmbcz59y34sqbyl9ksasqy23camcg0x-text-icu-static-example-0.1.0.0/share/x86_64-linux-ghc-8.4.3/text-icu-static-example-0.1.0.0
+Documentation installed in:
+/nix/store/88iy13ff60lghb1dr4qmlmx8m8z7h8k8-text-icu-static-example-0.1.0.0-doc/share/doc
+Configuration files installed in:
+/nix/store/sbmbcz59y34sqbyl9ksasqy23camcg0x-text-icu-static-example-0.1.0.0/etc
+No alex found
+Using ar found on system at:
+/nix/store/k8b9hqv58dd1z0j4ikak24ykndcm91s6-binutils-2.28.1/bin/ar
+No c2hs found
+No cpphs found
+No doctest found
+Using gcc version 7.3.0 given by user at:
+/nix/store/9y2f87qb1djmpjs1gxl6smfkpl581waa-gcc-wrapper-7.3.0/bin/gcc
+Using ghc version 8.4.3 found on system at:
+/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/bin/ghc
+Using ghc-pkg version 8.4.3 found on system at:
+/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/bin/ghc-pkg
+No ghcjs found
+No ghcjs-pkg found
+No greencard found
+Using haddock version 2.20.0 found on system at:
+/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/bin/haddock
+No happy found
+Using haskell-suite found on system at: haskell-suite-dummy-location
+Using haskell-suite-pkg found on system at: haskell-suite-pkg-dummy-location
+No hmake found
+Using hpc version 0.67 found on system at:
+/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/bin/hpc
+Using hsc2hs version 0.68.3 found on system at:
+/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/bin/hsc2hs
+No hscolour found
+No jhc found
+Using ld found on system at:
+/nix/store/qq3xv9kwi52yvgdf13jh2swavbhw3lpd-binutils-wrapper-2.28.1/bin/ld
+No lhc found
+No lhc-pkg found
+No pkg-config found
+Using runghc version 8.4.3 found on system at:
+/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/bin/runghc
+Using strip version 2.28 found on system at:
+/nix/store/k8b9hqv58dd1z0j4ikak24ykndcm91s6-binutils-2.28.1/bin/strip
+Using tar found on system at:
+/nix/store/7zam9d16ml78rb0p1p5gds4p5z99fpyv-gnutar-1.30/bin/tar
+No uhc found
+building
+Preprocessing executable 'text-icu-normalize' for text-icu-static-example-0.1.0.0..
+Building executable 'text-icu-normalize' for text-icu-static-example-0.1.0.0..
+Glasgow Haskell Compiler, Version 8.4.3, stage 2 booted by GHC version 8.2.1
+Using binary package database: /nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/package.conf.d/package.cache
+Using binary package database: /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/package.conf.d/package.cache
+Using binary package database: /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/package.conf.d/package.cache
+Using binary package database: dist/package.conf.inplace/package.cache
+package flags [-package-id base-4.11.1.0{unit base-4.11.1.0 True ([])},
+               -package-id text-1.2.3.0{unit text-1.2.3.0 True ([])},
+               -package-id text-icu-0.7.0.1-GQ0DM6OBTErByT1EmU06SY{unit text-icu-0.7.0.1-GQ0DM6OBTErByT1EmU06SY True ([])}]
+loading package database /nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/package.conf.d
+loading package database /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/package.conf.d
+loading package database /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/package.conf.d
+package text-icu-0.7.0.1-GQ0DM6OBTErByT1EmU06SY overrides a previously defined package
+loading package database dist/package.conf.inplace
+wired-in package ghc-prim mapped to ghc-prim-0.5.2.0
+wired-in package integer-gmp mapped to integer-gmp-1.0.2.0
+wired-in package base mapped to base-4.11.1.0
+wired-in package rts mapped to rts
+wired-in package template-haskell mapped to template-haskell-2.13.0.0
+wired-in package ghc mapped to ghc-8.4.3
+wired-in package dph-seq not found.
+wired-in package dph-par not found.
+package flags [-package-id base-4.11.1.0{unit base-4.11.1.0 True ([])},
+               -package-id text-1.2.3.0{unit text-1.2.3.0 True ([])},
+               -package-id text-icu-0.7.0.1-GQ0DM6OBTErByT1EmU06SY{unit text-icu-0.7.0.1 True ([])}]
+loading package database /nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/package.conf.d
+loading package database /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/package.conf.d
+loading package database /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/package.conf.d
+package text-icu-0.7.0.1 overrides a previously defined package
+loading package database dist/package.conf.inplace
+wired-in package ghc-prim mapped to ghc-prim-0.5.2.0
+wired-in package integer-gmp mapped to integer-gmp-1.0.2.0
+wired-in package base mapped to base-4.11.1.0
+wired-in package rts mapped to rts-1.0
+wired-in package template-haskell mapped to template-haskell-2.13.0.0
+wired-in package ghc mapped to ghc-8.4.3
+wired-in package dph-seq not found.
+wired-in package dph-par not found.
+*** Chasing dependencies:
+Chasing modules from: *Normalize.hs
+!!! Chasing dependencies: finished in 1.23 milliseconds, allocated 1.462 megabytes
+Stable obj: []
+Stable BCO: []
+Ready for upsweep
+  [NONREC
+      ModSummary {
+         ms_hs_date = 1970-01-01 00:00:01 UTC
+         ms_mod = Main,
+         ms_textual_imps = [(Nothing, Prelude), (Nothing, Data.Text.IO),
+                            (Nothing, Data.Text.ICU.Normalize)]
+         ms_srcimps = []
+      }]
+compile: input file Normalize.hs
+*** Checking old interface for Main (use -ddump-hi-diffs for more details):
+[1 of 1] Compiling Main             ( Normalize.hs, dist/build/text-icu-normalize/text-icu-normalize-tmp/Main.o )
+*** Parser [Main]:
+!!! Parser [Main]: finished in 0.17 milliseconds, allocated 0.179 megabytes
+*** Renamer/typechecker [Main]:
+!!! Renamer/typechecker [Main]: finished in 149.44 milliseconds, allocated 18.208 megabytes
+*** Desugar [Main]:
+Result size of Desugar (after optimization)
+  = {terms: 18, types: 10, coercions: 0, joins: 0/0}
+!!! Desugar [Main]: finished in 0.15 milliseconds, allocated 0.046 megabytes
+*** Simplifier [Main]:
+Result size of Simplifier iteration=1
+  = {terms: 41, types: 55, coercions: 9, joins: 0/0}
+Result size of Simplifier
+  = {terms: 41, types: 55, coercions: 9, joins: 0/0}
+!!! Simplifier [Main]: finished in 136.97 milliseconds, allocated 20.172 megabytes
+*** Specialise [Main]:
+Result size of Specialise
+  = {terms: 41, types: 55, coercions: 9, joins: 0/0}
+!!! Specialise [Main]: finished in 0.07 milliseconds, allocated 0.043 megabytes
+*** Float out(FOS {Lam = Just 0,
+                   Consts = True,
+                   OverSatApps = False}) [Main]:
+Result size of Float out(FOS {Lam = Just 0,
+                              Consts = True,
+                              OverSatApps = False})
+  = {terms: 41, types: 55, coercions: 9, joins: 0/0}
+!!! Float out(FOS {Lam = Just 0,
+                   Consts = True,
+                   OverSatApps = False}) [Main]: finished in 0.52 milliseconds, allocated 0.128 megabytes
+*** Simplifier [Main]:
+Result size of Simplifier
+  = {terms: 41, types: 55, coercions: 9, joins: 0/0}
+!!! Simplifier [Main]: finished in 0.61 milliseconds, allocated 0.170 megabytes
+*** Simplifier [Main]:
+Result size of Simplifier
+  = {terms: 41, types: 55, coercions: 9, joins: 0/0}
+!!! Simplifier [Main]: finished in 0.44 milliseconds, allocated 0.166 megabytes
+*** Simplifier [Main]:
+Result size of Simplifier iteration=1
+  = {terms: 46, types: 59, coercions: 9, joins: 0/0}
+Result size of Simplifier
+  = {terms: 46, types: 59, coercions: 9, joins: 0/0}
+!!! Simplifier [Main]: finished in 9.87 milliseconds, allocated 2.824 megabytes
+*** Float inwards [Main]:
+Result size of Float inwards
+  = {terms: 46, types: 59, coercions: 9, joins: 0/0}
+!!! Float inwards [Main]: finished in 0.03 milliseconds, allocated 0.004 megabytes
+*** Called arity analysis [Main]:
+Result size of Called arity analysis
+  = {terms: 46, types: 59, coercions: 9, joins: 0/0}
+!!! Called arity analysis [Main]: finished in 0.01 milliseconds, allocated 0.004 megabytes
+*** Simplifier [Main]:
+Result size of Simplifier
+  = {terms: 46, types: 59, coercions: 9, joins: 0/0}
+!!! Simplifier [Main]: finished in 0.39 milliseconds, allocated 0.243 megabytes
+*** Demand analysis [Main]:
+Result size of Demand analysis
+  = {terms: 46, types: 59, coercions: 9, joins: 0/0}
+!!! Demand analysis [Main]: finished in 0.78 milliseconds, allocated 0.153 megabytes
+*** Worker Wrapper binds [Main]:
+Result size of Worker Wrapper binds
+  = {terms: 46, types: 59, coercions: 9, joins: 0/0}
+!!! Worker Wrapper binds [Main]: finished in 0.05 milliseconds, allocated 0.016 megabytes
+*** Simplifier [Main]:
+Result size of Simplifier
+  = {terms: 46, types: 59, coercions: 9, joins: 0/0}
+!!! Simplifier [Main]: finished in 0.56 milliseconds, allocated 0.209 megabytes
+*** Exitification transformation [Main]:
+Result size of Exitification transformation
+  = {terms: 46, types: 59, coercions: 9, joins: 0/0}
+!!! Exitification transformation [Main]: finished in 0.01 milliseconds, allocated 0.004 megabytes
+*** Float out(FOS {Lam = Just 0,
+                   Consts = True,
+                   OverSatApps = True}) [Main]:
+Result size of Float out(FOS {Lam = Just 0,
+                              Consts = True,
+                              OverSatApps = True})
+  = {terms: 46, types: 59, coercions: 9, joins: 0/0}
+!!! Float out(FOS {Lam = Just 0,
+                   Consts = True,
+                   OverSatApps = True}) [Main]: finished in 0.22 milliseconds, allocated 0.155 megabytes
+*** Common sub-expression [Main]:
+Result size of Common sub-expression
+  = {terms: 46, types: 59, coercions: 6, joins: 0/0}
+!!! Common sub-expression [Main]: finished in 0.01 milliseconds, allocated 0.004 megabytes
+*** Float inwards [Main]:
+Result size of Float inwards
+  = {terms: 46, types: 59, coercions: 6, joins: 0/0}
+!!! Float inwards [Main]: finished in 0.01 milliseconds, allocated 0.004 megabytes
+*** Simplifier [Main]:
+Result size of Simplifier iteration=1
+  = {terms: 46, types: 59, coercions: 9, joins: 0/0}
+Result size of Simplifier
+  = {terms: 46, types: 59, coercions: 9, joins: 0/0}
+!!! Simplifier [Main]: finished in 12.57 milliseconds, allocated 0.479 megabytes
+*** Demand analysis [Main]:
+Result size of Demand analysis
+  = {terms: 46, types: 59, coercions: 9, joins: 0/0}
+!!! Demand analysis [Main]: finished in 0.35 milliseconds, allocated 0.157 megabytes
+*** CoreTidy [Main]:
+Result size of Tidy Core
+  = {terms: 46, types: 59, coercions: 9, joins: 0/0}
+!!! CoreTidy [Main]: finished in 1.89 milliseconds, allocated 1.535 megabytes
+writeBinIface: 22 Names
+writeBinIface: 79 dict entries
+Created temporary directory: /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13911_0
+*** CorePrep [Main]:
+Result size of CorePrep
+  = {terms: 54, types: 66, coercions: 9, joins: 0/1}
+!!! CorePrep [Main]: finished in 0.02 milliseconds, allocated 0.008 megabytes
+*** Stg2Stg:
+*** CodeGen [Main]:
+!!! CodeGen [Main]: finished in 5.02 milliseconds, allocated 1.871 megabytes
+*** Assembler:
+/nix/store/9y2f87qb1djmpjs1gxl6smfkpl581waa-gcc-wrapper-7.3.0/bin/cc -fno-stack-protector -DTABLES_NEXT_TO_CODE -I. -Idist/build/text-icu-normalize/text-icu-normalize-tmp -Idist/build/text-icu-normalize/text-icu-normalize-tmp -Idist/build/text-icu-normalize/autogen -Idist/build/global-autogen -Idist/build/text-icu-normalize/text-icu-normalize-tmp -no-pie -x assembler -c /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13911_0/ghc_2.s -o dist/build/text-icu-normalize/text-icu-normalize-tmp/Main.o
+*** Deleting temp files:
+Deleting: /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13911_0/ghc_1.s /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13911_0/ghc_2.s /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13911_0/ghc_3.c
+Warning: deleting non-existent /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13911_0/ghc_1.s
+Warning: deleting non-existent /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13911_0/ghc_3.c
+Upsweep completely successful.
+*** Deleting temp files:
+Deleting: 
+*** Deleting temp files:
+Deleting: 
+*** Deleting temp dirs:
+Deleting: /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13911_0
+Glasgow Haskell Compiler, Version 8.4.3, stage 2 booted by GHC version 8.2.1
+Using binary package database: /nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/package.conf.d/package.cache
+Using binary package database: /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/package.conf.d/package.cache
+Using binary package database: /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/package.conf.d/package.cache
+Using binary package database: dist/package.conf.inplace/package.cache
+package flags [-package-id base-4.11.1.0{unit base-4.11.1.0 True ([])},
+               -package-id text-1.2.3.0{unit text-1.2.3.0 True ([])},
+               -package-id text-icu-0.7.0.1-GQ0DM6OBTErByT1EmU06SY{unit text-icu-0.7.0.1-GQ0DM6OBTErByT1EmU06SY True ([])}]
+loading package database /nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/package.conf.d
+loading package database /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/package.conf.d
+loading package database /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/package.conf.d
+package text-icu-0.7.0.1-GQ0DM6OBTErByT1EmU06SY overrides a previously defined package
+loading package database dist/package.conf.inplace
+wired-in package ghc-prim mapped to ghc-prim-0.5.2.0
+wired-in package integer-gmp mapped to integer-gmp-1.0.2.0
+wired-in package base mapped to base-4.11.1.0
+wired-in package rts mapped to rts
+wired-in package template-haskell mapped to template-haskell-2.13.0.0
+wired-in package ghc mapped to ghc-8.4.3
+wired-in package dph-seq not found.
+wired-in package dph-par not found.
+package flags [-package-id base-4.11.1.0{unit base-4.11.1.0 True ([])},
+               -package-id text-1.2.3.0{unit text-1.2.3.0 True ([])},
+               -package-id text-icu-0.7.0.1-GQ0DM6OBTErByT1EmU06SY{unit text-icu-0.7.0.1 True ([])}]
+loading package database /nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/package.conf.d
+loading package database /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/package.conf.d
+loading package database /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/package.conf.d
+package text-icu-0.7.0.1 overrides a previously defined package
+loading package database dist/package.conf.inplace
+wired-in package ghc-prim mapped to ghc-prim-0.5.2.0
+wired-in package integer-gmp mapped to integer-gmp-1.0.2.0
+wired-in package base mapped to base-4.11.1.0
+wired-in package rts mapped to rts-1.0
+wired-in package template-haskell mapped to template-haskell-2.13.0.0
+wired-in package ghc mapped to ghc-8.4.3
+wired-in package dph-seq not found.
+wired-in package dph-par not found.
+*** Chasing dependencies:
+Chasing modules from: *Normalize.hs
+!!! Chasing dependencies: finished in 1.55 milliseconds, allocated 1.458 megabytes
+Stable obj: [ ESeQ4 :-> Main]
+Stable BCO: []
+Ready for upsweep
+  [NONREC
+      ModSummary {
+         ms_hs_date = 1970-01-01 00:00:01 UTC
+         ms_mod = Main,
+         ms_textual_imps = [(Nothing, Prelude), (Nothing, Data.Text.IO),
+                            (Nothing, Data.Text.ICU.Normalize)]
+         ms_srcimps = []
+      }]
+compile: input file Normalize.hs
+*** Checking old interface for Main (use -ddump-hi-diffs for more details):
+[1 of 1] Skipping  Main             ( Normalize.hs, dist/build/text-icu-normalize/text-icu-normalize-tmp/Main.o )
+*** Deleting temp files:
+Deleting: 
+Upsweep completely successful.
+*** Deleting temp files:
+Deleting: 
+link: linkables are ...
+LinkableM (2018-08-26 17:19:09.773901139 UTC) Main
+   [DotO dist/build/text-icu-normalize/text-icu-normalize-tmp/Main.o]
+Linking dist/build/text-icu-normalize/text-icu-normalize ...
+Created temporary directory: /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13939_0
+*** C Compiler:
+/nix/store/9y2f87qb1djmpjs1gxl6smfkpl581waa-gcc-wrapper-7.3.0/bin/cc -fno-stack-protector -DTABLES_NEXT_TO_CODE -c /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13939_0/ghc_1.c -o /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13939_0/ghc_2.o -no-pie -I/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/include
+*** C Compiler:
+/nix/store/9y2f87qb1djmpjs1gxl6smfkpl581waa-gcc-wrapper-7.3.0/bin/cc -fno-stack-protector -DTABLES_NEXT_TO_CODE -c /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13939_0/ghc_4.s -o /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13939_0/ghc_5.o
+*** Linker:
+/nix/store/9y2f87qb1djmpjs1gxl6smfkpl581waa-gcc-wrapper-7.3.0/bin/cc -fno-stack-protector -DTABLES_NEXT_TO_CODE '-Wl,--hash-size=31' -Wl,--reduce-memory-overheads -Wl,--no-as-needed -static -pthread -L/nix/store/m9qzh7zv0pvkarprpda5zy68myq43iqs-glibc-2.26-131-static/lib -L/nix/store/p5b8ashcchqzwlv1vcbzq98cqmfmvfky-gmp-6.1.2/lib -L/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib -licui18n -licuio -licuuc -licudata -ldl -lm '-lstdc++' -o dist/build/text-icu-normalize/text-icu-normalize -lm -no-pie -Wl,--gc-sections dist/build/text-icu-normalize/text-icu-normalize-tmp/Main.o -L/nix/store/54cwjh1lsmjpk2cbs43gw89w4zhk3ybb-ncurses-6.0-20171125/lib -L/nix/store/wc2ll61lypsv9yig6mvy73c0lw1dp15a-gmp-6.1.2/lib -licui18n -licuio -licuuc -licudata -ldl -lm '-lstdc++' -L/nix/store/0yrad0gmb1840r77scxn4gikpbjgyabv-text-icu-0.7.0.1/lib/ghc-8.4.3/text-icu-0.7.0.1 -L/nix/store/54cwjh1lsmjpk2cbs43gw89w4zhk3ybb-ncurses-6.0-20171125/lib -L/nix/store/wc2ll61lypsv9yig6mvy73c0lw1dp15a-gmp-6.1.2/lib -L/nix/store/0al5181s03bylmsvrwj2lnvvlsqvdbcl-icu4c-59.1-dev/lib -L/nix/store/zvm4zywflp9x8q2zrs2506c8jcjp6xvr-icu4c-59.1/lib -L/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/text-1.2.3.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/binary-0.8.5.1 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/containers-0.5.11.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/bytestring-0.10.8.2 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/deepseq-1.4.3.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/array-0.5.2.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/base-4.11.1.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/integer-gmp-1.0.2.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/ghc-prim-0.5.2.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/rts /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13939_0/ghc_2.o /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13939_0/ghc_5.o -Wl,-u,base_GHCziTopHandler_runIO_closure -Wl,-u,base_GHCziTopHandler_runNonIO_closure -Wl,-u,ghczmprim_GHCziTuple_Z0T_closure -Wl,-u,ghczmprim_GHCziTypes_True_closure -Wl,-u,ghczmprim_GHCziTypes_False_closure -Wl,-u,base_GHCziPack_unpackCString_closure -Wl,-u,base_GHCziWeak_runFinalizzerBatch_closure -Wl,-u,base_GHCziIOziException_stackOverflow_closure -Wl,-u,base_GHCziIOziException_heapOverflow_closure -Wl,-u,base_GHCziIOziException_allocationLimitExceeded_closure -Wl,-u,base_GHCziIOziException_blockedIndefinitelyOnMVar_closure -Wl,-u,base_GHCziIOziException_blockedIndefinitelyOnSTM_closure -Wl,-u,base_GHCziIOziException_cannotCompactFunction_closure -Wl,-u,base_GHCziIOziException_cannotCompactPinned_closure -Wl,-u,base_GHCziIOziException_cannotCompactMutable_closure -Wl,-u,base_ControlziExceptionziBase_absentSumFieldError_closure -Wl,-u,base_ControlziExceptionziBase_nonTermination_closure -Wl,-u,base_ControlziExceptionziBase_nestedAtomically_closure -Wl,-u,base_GHCziEventziThread_blockedOnBadFD_closure -Wl,-u,base_GHCziConcziSync_runSparks_closure -Wl,-u,base_GHCziConcziIO_ensureIOManagerIsRunning_closure -Wl,-u,base_GHCziConcziIO_ioManagerCapabilitiesChanged_closure -Wl,-u,base_GHCziConcziSignal_runHandlersPtr_closure -Wl,-u,base_GHCziTopHandler_flushStdHandles_closure -Wl,-u,base_GHCziTopHandler_runMainIO_closure -Wl,-u,ghczmprim_GHCziTypes_Czh_con_info -Wl,-u,ghczmprim_GHCziTypes_Izh_con_info -Wl,-u,ghczmprim_GHCziTypes_Fzh_con_info -Wl,-u,ghczmprim_GHCziTypes_Dzh_con_info -Wl,-u,ghczmprim_GHCziTypes_Wzh_con_info -Wl,-u,base_GHCziPtr_Ptr_con_info -Wl,-u,base_GHCziPtr_FunPtr_con_info -Wl,-u,base_GHCziInt_I8zh_con_info -Wl,-u,base_GHCziInt_I16zh_con_info -Wl,-u,base_GHCziInt_I32zh_con_info -Wl,-u,base_GHCziInt_I64zh_con_info -Wl,-u,base_GHCziWord_W8zh_con_info -Wl,-u,base_GHCziWord_W16zh_con_info -Wl,-u,base_GHCziWord_W32zh_con_info -Wl,-u,base_GHCziWord_W64zh_con_info -Wl,-u,base_GHCziStable_StablePtr_con_info -Wl,-u,hs_atomic_add8 -Wl,-u,hs_atomic_add16 -Wl,-u,hs_atomic_add32 -Wl,-u,hs_atomic_add64 -Wl,-u,hs_atomic_sub8 -Wl,-u,hs_atomic_sub16 -Wl,-u,hs_atomic_sub32 -Wl,-u,hs_atomic_sub64 -Wl,-u,hs_atomic_and8 -Wl,-u,hs_atomic_and16 -Wl,-u,hs_atomic_and32 -Wl,-u,hs_atomic_and64 -Wl,-u,hs_atomic_nand8 -Wl,-u,hs_atomic_nand16 -Wl,-u,hs_atomic_nand32 -Wl,-u,hs_atomic_nand64 -Wl,-u,hs_atomic_or8 -Wl,-u,hs_atomic_or16 -Wl,-u,hs_atomic_or32 -Wl,-u,hs_atomic_or64 -Wl,-u,hs_atomic_xor8 -Wl,-u,hs_atomic_xor16 -Wl,-u,hs_atomic_xor32 -Wl,-u,hs_atomic_xor64 -Wl,-u,hs_cmpxchg8 -Wl,-u,hs_cmpxchg16 -Wl,-u,hs_cmpxchg32 -Wl,-u,hs_cmpxchg64 -Wl,-u,hs_atomicread8 -Wl,-u,hs_atomicread16 -Wl,-u,hs_atomicread32 -Wl,-u,hs_atomicread64 -Wl,-u,hs_atomicwrite8 -Wl,-u,hs_atomicwrite16 -Wl,-u,hs_atomicwrite32 -Wl,-u,hs_atomicwrite64 -lHStext-icu-0.7.0.1-GQ0DM6OBTErByT1EmU06SY -lHStext-1.2.3.0 -lHSbinary-0.8.5.1 -lHScontainers-0.5.11.0 -lHSbytestring-0.10.8.2 -lHSdeepseq-1.4.3.0 -lHSarray-0.5.2.0 -lHSbase-4.11.1.0 -lHSinteger-gmp-1.0.2.0 -lHSghc-prim-0.5.2.0 -lHSrts -lCffi -licuuc -licui18n -licudata -lgmp -lm -lrt -ldl
+/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/rts/libHSrts.a(Linker.o): In function `internal_dlopen':
+Linker.c:(.text.internal_dlopen+0x7): warning: Using 'dlopen' in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(uniset_props.ao): In function `icu_59::UnicodeSet::applyPattern(icu_59::RuleCharacterIterator&, icu_59::SymbolTable const*, icu_59::UnicodeString&, unsigned int, icu_59::UnicodeSet& (icu_59::UnicodeSet::*)(int), UErrorCode&)':
+(.text+0x1792): undefined reference to `__dynamic_cast'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(coll.ao): In function `icu_59::Collator::makeInstance(icu_59::Locale const&, UErrorCode&)':
+(.text+0x903): undefined reference to `icu_59::SharedObject::removeRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(coll.ao): In function `icu_59::initAvailableLocaleList(UErrorCode&)':
+(.text+0x1626): undefined reference to `__cxa_throw_bad_array_new_length'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(coll.ao):(.data.rel.ro._ZTIN6icu_598CollatorE[_ZTIN6icu_598CollatorE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(coll.ao):(.data.rel.ro._ZTIN6icu_5915CollatorFactoryE[_ZTIN6icu_5915CollatorFactoryE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(coll.ao):(.data.rel.ro._ZTIN6icu_5918ICUCollatorFactoryE[_ZTIN6icu_5918ICUCollatorFactoryE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(coll.ao):(.data.rel.ro._ZTIN6icu_5918ICUCollatorServiceE[_ZTIN6icu_5918ICUCollatorServiceE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(coll.ao):(.data.rel.ro._ZTIN6icu_598CFactoryE[_ZTIN6icu_598CFactoryE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(coll.ao):(.data.rel.ro._ZTIN6icu_5930CollationLocaleListEnumerationE[_ZTIN6icu_5930CollationLocaleListEnumerationE]+0x0): more undefined references to `vtable for __cxxabiv1::__si_class_type_info' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(coll.ao):(.data.rel.ro._ZTVN6icu_5915CollatorFactoryE[_ZTVN6icu_5915CollatorFactoryE]+0x30): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(coll.ao):(.data.rel.ro._ZTVN6icu_5915CollatorFactoryE[_ZTVN6icu_5915CollatorFactoryE]+0x40): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(coll.ao):(.data.rel.ro._ZTVN6icu_598CollatorE[_ZTVN6icu_598CollatorE]+0x20): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(coll.ao):(.data.rel.ro._ZTVN6icu_598CollatorE[_ZTVN6icu_598CollatorE]+0x38): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(coll.ao):(.data.rel.ro._ZTVN6icu_598CollatorE[_ZTVN6icu_598CollatorE]+0x48): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(coll.ao):(.data.rel.ro._ZTVN6icu_598CollatorE[_ZTVN6icu_598CollatorE]+0x58): more undefined references to `__cxa_pure_virtual' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(ucnv_bld.ao):(.data.DW.ref.__gxx_personality_v0[DW.ref.__gxx_personality_v0]+0x0): undefined reference to `__gxx_personality_v0'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(normalizer2.ao): In function `normalizeSecondAndAppend(UNormalizer2 const*, char16_t*, int, int, char16_t const*, int, signed char, UErrorCode*)':
+(.text+0x13a): undefined reference to `__dynamic_cast'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(normalizer2.ao): In function `unorm2_normalize_59':
+(.text+0xb40): undefined reference to `__dynamic_cast'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(normalizer2.ao):(.data.rel.ro._ZTIN6icu_5911Normalizer2E[_ZTIN6icu_5911Normalizer2E]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(normalizer2.ao):(.data.rel.ro._ZTIN6icu_5919Normalizer2WithImplE[_ZTIN6icu_5919Normalizer2WithImplE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(normalizer2.ao):(.data.rel.ro._ZTIN6icu_5920DecomposeNormalizer2E[_ZTIN6icu_5920DecomposeNormalizer2E]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(normalizer2.ao):(.data.rel.ro._ZTIN6icu_5918ComposeNormalizer2E[_ZTIN6icu_5918ComposeNormalizer2E]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(normalizer2.ao):(.data.rel.ro._ZTIN6icu_5914FCDNormalizer2E[_ZTIN6icu_5914FCDNormalizer2E]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(normalizer2.ao):(.data.rel.ro._ZTIN6icu_5915NoopNormalizer2E[_ZTIN6icu_5915NoopNormalizer2E]+0x0): more undefined references to `vtable for __cxxabiv1::__si_class_type_info' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(normalizer2.ao):(.data.rel.ro._ZTVN6icu_5911Normalizer2E[_ZTVN6icu_5911Normalizer2E]+0x28): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(normalizer2.ao):(.data.rel.ro._ZTVN6icu_5911Normalizer2E[_ZTVN6icu_5911Normalizer2E]+0x30): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(normalizer2.ao):(.data.rel.ro._ZTVN6icu_5911Normalizer2E[_ZTVN6icu_5911Normalizer2E]+0x38): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(normalizer2.ao):(.data.rel.ro._ZTVN6icu_5911Normalizer2E[_ZTVN6icu_5911Normalizer2E]+0x40): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(normalizer2.ao):(.data.rel.ro._ZTVN6icu_5911Normalizer2E[_ZTVN6icu_5911Normalizer2E]+0x60): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(normalizer2.ao):(.data.rel.ro._ZTVN6icu_5911Normalizer2E[_ZTVN6icu_5911Normalizer2E]+0x68): more undefined references to `__cxa_pure_virtual' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(loadednormalizer2impl.ao):(.data.rel.ro._ZTIN6icu_5921LoadedNormalizer2ImplE[_ZTIN6icu_5921LoadedNormalizer2ImplE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(uniset.ao): In function `icu_59::SymbolTable::~SymbolTable()':
+(.text+0x3fe): undefined reference to `operator delete(void*)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(uniset.ao):(.data.rel.ro._ZTIN6icu_5911SymbolTableE[_ZTIN6icu_5911SymbolTableE]+0x0): undefined reference to `vtable for __cxxabiv1::__class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(uniset.ao):(.data.rel.ro._ZTIN6icu_5910UnicodeSetE[_ZTIN6icu_5910UnicodeSetE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unifilt.ao): In function `icu_59::UnicodeMatcher::~UnicodeMatcher()':
+(.text+0x14e): undefined reference to `operator delete(void*)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unifilt.ao):(.data.rel.ro._ZTIN6icu_5914UnicodeMatcherE[_ZTIN6icu_5914UnicodeMatcherE]+0x0): undefined reference to `vtable for __cxxabiv1::__class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unifilt.ao):(.data.rel.ro._ZTIN6icu_5913UnicodeFilterE[_ZTIN6icu_5913UnicodeFilterE]+0x0): undefined reference to `vtable for __cxxabiv1::__vmi_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unifilt.ao):(.data.rel.ro._ZTVN6icu_5913UnicodeFilterE[_ZTVN6icu_5913UnicodeFilterE]+0x20): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unifilt.ao):(.data.rel.ro._ZTVN6icu_5913UnicodeFilterE[_ZTVN6icu_5913UnicodeFilterE]+0x28): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unifilt.ao):(.data.rel.ro._ZTVN6icu_5913UnicodeFilterE[_ZTVN6icu_5913UnicodeFilterE]+0x48): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unifilt.ao):(.data.rel.ro._ZTVN6icu_5913UnicodeFilterE[_ZTVN6icu_5913UnicodeFilterE]+0x80): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unifilt.ao):(.data.rel.ro._ZTVN6icu_5913UnicodeFilterE[_ZTVN6icu_5913UnicodeFilterE]+0x88): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unifilt.ao):(.data.rel.ro._ZTVN6icu_5913UnicodeFilterE[_ZTVN6icu_5913UnicodeFilterE]+0x90): more undefined references to `__cxa_pure_virtual' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unifunct.ao):(.data.rel.ro._ZTIN6icu_5914UnicodeFunctorE[_ZTIN6icu_5914UnicodeFunctorE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unifunct.ao):(.data.rel.ro._ZTVN6icu_5914UnicodeFunctorE[_ZTVN6icu_5914UnicodeFunctorE]+0x20): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unifunct.ao):(.data.rel.ro._ZTVN6icu_5914UnicodeFunctorE[_ZTVN6icu_5914UnicodeFunctorE]+0x28): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unifunct.ao):(.data.rel.ro._ZTVN6icu_5914UnicodeFunctorE[_ZTVN6icu_5914UnicodeFunctorE]+0x40): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(ubrk.ao): In function `ubrk_getBinaryRules_59':
+(.text+0x36c): undefined reference to `__dynamic_cast'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(rbbi.ao):(.data.rel.ro._ZTIN6icu_5922RuleBasedBreakIteratorE[_ZTIN6icu_5922RuleBasedBreakIteratorE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(rbbirb.ao):(.data.rel.ro._ZTIN6icu_597UMemoryE[_ZTIN6icu_597UMemoryE]+0x0): undefined reference to `vtable for __cxxabiv1::__class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(rbbirb.ao):(.data.rel.ro._ZTIN6icu_5915RBBIRuleBuilderE[_ZTIN6icu_5915RBBIRuleBuilderE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(rbbiscan.ao):(.data.rel.ro._ZTIN6icu_5915RBBIRuleScannerE[_ZTIN6icu_5915RBBIRuleScannerE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(rbbistbl.ao):(.data.rel.ro._ZTIN6icu_5915RBBISymbolTableE[_ZTIN6icu_5915RBBISymbolTableE]+0x0): undefined reference to `vtable for __cxxabiv1::__vmi_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(parsepos.ao):(.data.rel.ro._ZTIN6icu_5913ParsePositionE[_ZTIN6icu_5913ParsePositionE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(uobject.ao): In function `icu_59::UMemory::operator new(unsigned long) [clone .localalias.0]':
+(.text+0x3d): undefined reference to `__cxa_call_unexpected'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(uobject.ao): In function `icu_59::UMemory::operator delete(void*) [clone .localalias.1]':
+(.text+0x79): undefined reference to `__cxa_call_unexpected'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(uobject.ao):(.data.rel.ro._ZTIN6icu_597UObjectE[_ZTIN6icu_597UObjectE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(uvector.ao):(.data.rel.ro._ZTIN6icu_597UVectorE[_ZTIN6icu_597UVectorE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(ustack.ao):(.data.rel.ro._ZTIN6icu_596UStackE[_ZTIN6icu_596UStackE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(locid.ao):(.data.rel.ro._ZTIN6icu_596LocaleE[_ZTIN6icu_596LocaleE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(locid.ao):(.data.rel.ro._ZTIN6icu_5918KeywordEnumerationE[_ZTIN6icu_5918KeywordEnumerationE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(locavailable.ao): In function `icu_59::locale_available_init()':
+(.text+0x42b): undefined reference to `__cxa_throw_bad_array_new_length'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unistr.ao):(.data.rel.ro._ZTIN6icu_5923UnicodeStringAppendableE[_ZTIN6icu_5923UnicodeStringAppendableE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unistr.ao):(.data.rel.ro._ZTIN6icu_5911ReplaceableE[_ZTIN6icu_5911ReplaceableE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unistr.ao):(.data.rel.ro._ZTIN6icu_5913UnicodeStringE[_ZTIN6icu_5913UnicodeStringE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unistr.ao):(.data.rel.ro._ZTVN6icu_5911ReplaceableE[_ZTVN6icu_5911ReplaceableE]+0x28): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unistr.ao):(.data.rel.ro._ZTVN6icu_5911ReplaceableE[_ZTVN6icu_5911ReplaceableE]+0x30): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unistr.ao):(.data.rel.ro._ZTVN6icu_5911ReplaceableE[_ZTVN6icu_5911ReplaceableE]+0x38): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unistr.ao):(.data.rel.ro._ZTVN6icu_5911ReplaceableE[_ZTVN6icu_5911ReplaceableE]+0x50): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unistr.ao):(.data.rel.ro._ZTVN6icu_5911ReplaceableE[_ZTVN6icu_5911ReplaceableE]+0x58): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(unistr.ao):(.data.rel.ro._ZTVN6icu_5911ReplaceableE[_ZTVN6icu_5911ReplaceableE]+0x60): more undefined references to `__cxa_pure_virtual' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(normalizer2impl.ao):(.data.rel.ro._ZTIN6icu_5915Normalizer2ImplE[_ZTIN6icu_5915Normalizer2ImplE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(filterednormalizer2.ao):(.data.rel.ro._ZTIN6icu_5919FilteredNormalizer2E[_ZTIN6icu_5919FilteredNormalizer2E]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(schriter.ao):(.data.rel.ro._ZTIN6icu_5923StringCharacterIteratorE[_ZTIN6icu_5923StringCharacterIteratorE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(uchriter.ao):(.data.rel.ro._ZTIN6icu_5922UCharCharacterIteratorE[_ZTIN6icu_5922UCharCharacterIteratorE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(bmpset.ao):(.data.rel.ro._ZTIN6icu_596BMPSetE[_ZTIN6icu_596BMPSetE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(brkiter.ao):(.data.rel.ro._ZTIN6icu_5913BreakIteratorE[_ZTIN6icu_5913BreakIteratorE]+0x0): more undefined references to `vtable for __cxxabiv1::__si_class_type_info' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(brkiter.ao):(.data.rel.ro._ZTVN6icu_5913BreakIteratorE[_ZTVN6icu_5913BreakIteratorE]+0x20): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(brkiter.ao):(.data.rel.ro._ZTVN6icu_5913BreakIteratorE[_ZTVN6icu_5913BreakIteratorE]+0x28): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(brkiter.ao):(.data.rel.ro._ZTVN6icu_5913BreakIteratorE[_ZTVN6icu_5913BreakIteratorE]+0x30): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(brkiter.ao):(.data.rel.ro._ZTVN6icu_5913BreakIteratorE[_ZTVN6icu_5913BreakIteratorE]+0x38): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(brkiter.ao):(.data.rel.ro._ZTVN6icu_5913BreakIteratorE[_ZTVN6icu_5913BreakIteratorE]+0x40): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(brkiter.ao):(.data.rel.ro._ZTVN6icu_5913BreakIteratorE[_ZTVN6icu_5913BreakIteratorE]+0x48): more undefined references to `__cxa_pure_virtual' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(brkeng.ao):(.data.rel.ro._ZTIN6icu_5919LanguageBreakEngineE[_ZTIN6icu_5919LanguageBreakEngineE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(brkeng.ao):(.data.rel.ro._ZTIN6icu_5920LanguageBreakFactoryE[_ZTIN6icu_5920LanguageBreakFactoryE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(brkeng.ao):(.data.rel.ro._ZTIN6icu_5915UnhandledEngineE[_ZTIN6icu_5915UnhandledEngineE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(brkeng.ao):(.data.rel.ro._ZTIN6icu_5923ICULanguageBreakFactoryE[_ZTIN6icu_5923ICULanguageBreakFactoryE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(brkeng.ao):(.data.rel.ro._ZTVN6icu_5919LanguageBreakEngineE[_ZTVN6icu_5919LanguageBreakEngineE]+0x20): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(brkeng.ao):(.data.rel.ro._ZTVN6icu_5919LanguageBreakEngineE[_ZTVN6icu_5919LanguageBreakEngineE]+0x28): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(brkeng.ao):(.data.rel.ro._ZTVN6icu_5920LanguageBreakFactoryE[_ZTVN6icu_5920LanguageBreakFactoryE]+0x20): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(dictbe.ao):(.data.rel.ro._ZTIN6icu_5921DictionaryBreakEngineE[_ZTIN6icu_5921DictionaryBreakEngineE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(dictbe.ao):(.data.rel.ro._ZTIN6icu_5915ThaiBreakEngineE[_ZTIN6icu_5915ThaiBreakEngineE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(dictbe.ao):(.data.rel.ro._ZTIN6icu_5914LaoBreakEngineE[_ZTIN6icu_5914LaoBreakEngineE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(dictbe.ao):(.data.rel.ro._ZTIN6icu_5918BurmeseBreakEngineE[_ZTIN6icu_5918BurmeseBreakEngineE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(dictbe.ao):(.data.rel.ro._ZTIN6icu_5916KhmerBreakEngineE[_ZTIN6icu_5916KhmerBreakEngineE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(dictbe.ao):(.data.rel.ro._ZTIN6icu_5914CjkBreakEngineE[_ZTIN6icu_5914CjkBreakEngineE]+0x0): more undefined references to `vtable for __cxxabiv1::__si_class_type_info' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(dictbe.ao):(.data.rel.ro._ZTVN6icu_5921DictionaryBreakEngineE[_ZTVN6icu_5921DictionaryBreakEngineE]+0x38): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(filteredbrk.ao): In function `icu_59::SimpleFilteredBreakIteratorBuilder::build(icu_59::BreakIterator*, UErrorCode&)':
+(.text+0x17f2): undefined reference to `__cxa_throw_bad_array_new_length'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(filteredbrk.ao):(.data.rel.ro._ZTIN6icu_5928FilteredBreakIteratorBuilderE[_ZTIN6icu_5928FilteredBreakIteratorBuilderE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(filteredbrk.ao):(.data.rel.ro._ZTIN6icu_5910UStringSetE[_ZTIN6icu_5910UStringSetE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(filteredbrk.ao):(.data.rel.ro._ZTIN6icu_5931SimpleFilteredSentenceBreakDataE[_ZTIN6icu_5931SimpleFilteredSentenceBreakDataE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(filteredbrk.ao):(.data.rel.ro._ZTIN6icu_5935SimpleFilteredSentenceBreakIteratorE[_ZTIN6icu_5935SimpleFilteredSentenceBreakIteratorE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(filteredbrk.ao):(.data.rel.ro._ZTIN6icu_5934SimpleFilteredBreakIteratorBuilderE[_ZTIN6icu_5934SimpleFilteredBreakIteratorBuilderE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(filteredbrk.ao):(.data.rel.ro._ZTVN6icu_5928FilteredBreakIteratorBuilderE[_ZTVN6icu_5928FilteredBreakIteratorBuilderE]+0x28): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(filteredbrk.ao):(.data.rel.ro._ZTVN6icu_5928FilteredBreakIteratorBuilderE[_ZTVN6icu_5928FilteredBreakIteratorBuilderE]+0x30): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(filteredbrk.ao):(.data.rel.ro._ZTVN6icu_5928FilteredBreakIteratorBuilderE[_ZTVN6icu_5928FilteredBreakIteratorBuilderE]+0x38): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(serv.ao): In function `icu_59::ICUService::acceptsListener(icu_59::EventListener const&) const':
+(.text+0x3f8): undefined reference to `__dynamic_cast'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(serv.ao):(.data.rel.ro._ZTIN6icu_5913ICUServiceKeyE[_ZTIN6icu_5913ICUServiceKeyE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(serv.ao):(.data.rel.ro._ZTIN6icu_5917ICUServiceFactoryE[_ZTIN6icu_5917ICUServiceFactoryE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(serv.ao):(.data.rel.ro._ZTIN6icu_5913SimpleFactoryE[_ZTIN6icu_5913SimpleFactoryE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(serv.ao):(.data.rel.ro._ZTIN6icu_5915ServiceListenerE[_ZTIN6icu_5915ServiceListenerE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(serv.ao):(.data.rel.ro._ZTIN6icu_5910ICUServiceE[_ZTIN6icu_5910ICUServiceE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(serv.ao):(.data.rel.ro._ZTVN6icu_5917ICUServiceFactoryE[_ZTVN6icu_5917ICUServiceFactoryE]+0x28): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(serv.ao):(.data.rel.ro._ZTVN6icu_5917ICUServiceFactoryE[_ZTVN6icu_5917ICUServiceFactoryE]+0x30): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(serv.ao):(.data.rel.ro._ZTVN6icu_5917ICUServiceFactoryE[_ZTVN6icu_5917ICUServiceFactoryE]+0x38): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(serv.ao):(.data.rel.ro._ZTVN6icu_5915ServiceListenerE[_ZTVN6icu_5915ServiceListenerE]+0x28): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(serv.ao):(.data.rel.ro._ZTVN6icu_5910ICUServiceE[_ZTVN6icu_5910ICUServiceE]+0x80): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(servnotf.ao):(.data.rel.ro._ZTIN6icu_5913EventListenerE[_ZTIN6icu_5913EventListenerE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(servnotf.ao):(.data.rel.ro._ZTIN6icu_5911ICUNotifierE[_ZTIN6icu_5911ICUNotifierE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(servnotf.ao):(.data.rel.ro._ZTVN6icu_5911ICUNotifierE[_ZTVN6icu_5911ICUNotifierE]+0x38): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(servnotf.ao):(.data.rel.ro._ZTVN6icu_5911ICUNotifierE[_ZTVN6icu_5911ICUNotifierE]+0x40): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(servls.ao):(.data.rel.ro._ZTIN6icu_5916ICULocaleServiceE[_ZTIN6icu_5916ICULocaleServiceE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(servls.ao):(.data.rel.ro._ZTIN6icu_5918ServiceEnumerationE[_ZTIN6icu_5918ServiceEnumerationE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(servls.ao):(.data.rel.ro._ZTVN6icu_5916ICULocaleServiceE[_ZTVN6icu_5916ICULocaleServiceE]+0x80): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(servlk.ao):(.data.rel.ro._ZTIN6icu_599LocaleKeyE[_ZTIN6icu_599LocaleKeyE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(servlkf.ao):(.data.rel.ro._ZTIN6icu_5916LocaleKeyFactoryE[_ZTIN6icu_5916LocaleKeyFactoryE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(servrbf.ao):(.data.rel.ro._ZTIN6icu_5924ICUResourceBundleFactoryE[_ZTIN6icu_5924ICUResourceBundleFactoryE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(servslkf.ao):(.data.rel.ro._ZTIN6icu_5922SimpleLocaleKeyFactoryE[_ZTIN6icu_5922SimpleLocaleKeyFactoryE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(ustrenum.ao):(.data.rel.ro._ZTIN6icu_5917StringEnumerationE[_ZTIN6icu_5917StringEnumerationE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(ustrenum.ao):(.data.rel.ro._ZTIN6icu_5918UStringEnumerationE[_ZTIN6icu_5918UStringEnumerationE]+0x0): more undefined references to `vtable for __cxxabiv1::__si_class_type_info' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(ustrenum.ao):(.data.rel.ro._ZTVN6icu_5917StringEnumerationE[_ZTVN6icu_5917StringEnumerationE]+0x30): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(ustrenum.ao):(.data.rel.ro._ZTVN6icu_5917StringEnumerationE[_ZTVN6icu_5917StringEnumerationE]+0x50): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(uvectr32.ao):(.data.rel.ro._ZTIN6icu_599UVector32E[_ZTIN6icu_599UVector32E]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(uresdata.ao):(.data.rel.ro._ZTIN6icu_5917ResourceDataValueE[_ZTIN6icu_5917ResourceDataValueE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(resbund.ao):(.data.rel.ro._ZTIN6icu_5914ResourceBundleE[_ZTIN6icu_5914ResourceBundleE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(ucharstriebuilder.ao): In function `icu_59::UCharsTrieBuilder::add(icu_59::UnicodeString const&, int, UErrorCode&)':
+(.text+0x8f1): undefined reference to `__cxa_throw_bad_array_new_length'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(ucharstriebuilder.ao):(.data.rel.ro._ZTIN6icu_5917UCharsTrieBuilder18UCTLinearMatchNodeE[_ZTIN6icu_5917UCharsTrieBuilder18UCTLinearMatchNodeE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(ucharstriebuilder.ao):(.data.rel.ro._ZTIN6icu_5917UCharsTrieBuilderE[_ZTIN6icu_5917UCharsTrieBuilderE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(dictionarydata.ao):(.data.rel.ro._ZTIN6icu_5917DictionaryMatcherE[_ZTIN6icu_5917DictionaryMatcherE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(dictionarydata.ao):(.data.rel.ro._ZTIN6icu_5923UCharsDictionaryMatcherE[_ZTIN6icu_5923UCharsDictionaryMatcherE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(dictionarydata.ao):(.data.rel.ro._ZTIN6icu_5922BytesDictionaryMatcherE[_ZTIN6icu_5922BytesDictionaryMatcherE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(appendable.ao):(.data.rel.ro._ZTIN6icu_5910AppendableE[_ZTIN6icu_5910AppendableE]+0x0): more undefined references to `vtable for __cxxabiv1::__si_class_type_info' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(appendable.ao):(.data.rel.ro._ZTVN6icu_5910AppendableE[_ZTVN6icu_5910AppendableE]+0x28): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(chariter.ao):(.data.rel.ro._ZTIN6icu_5924ForwardCharacterIteratorE[_ZTIN6icu_5924ForwardCharacterIteratorE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(chariter.ao):(.data.rel.ro._ZTIN6icu_5917CharacterIteratorE[_ZTIN6icu_5917CharacterIteratorE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(chariter.ao):(.data.rel.ro._ZTVN6icu_5924ForwardCharacterIteratorE[_ZTVN6icu_5924ForwardCharacterIteratorE]+0x20): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(chariter.ao):(.data.rel.ro._ZTVN6icu_5924ForwardCharacterIteratorE[_ZTVN6icu_5924ForwardCharacterIteratorE]+0x28): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(chariter.ao):(.data.rel.ro._ZTVN6icu_5924ForwardCharacterIteratorE[_ZTVN6icu_5924ForwardCharacterIteratorE]+0x30): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(chariter.ao):(.data.rel.ro._ZTVN6icu_5924ForwardCharacterIteratorE[_ZTVN6icu_5924ForwardCharacterIteratorE]+0x38): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(chariter.ao):(.data.rel.ro._ZTVN6icu_5924ForwardCharacterIteratorE[_ZTVN6icu_5924ForwardCharacterIteratorE]+0x40): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(chariter.ao):(.data.rel.ro._ZTVN6icu_5924ForwardCharacterIteratorE[_ZTVN6icu_5924ForwardCharacterIteratorE]+0x48): more undefined references to `__cxa_pure_virtual' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(resource.ao):(.data.rel.ro._ZTIN6icu_5913ResourceValueE[_ZTIN6icu_5913ResourceValueE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(resource.ao):(.data.rel.ro._ZTIN6icu_5912ResourceSinkE[_ZTIN6icu_5912ResourceSinkE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(resource.ao):(.data.rel.ro._ZTVN6icu_5913ResourceValueE[_ZTVN6icu_5913ResourceValueE]+0x28): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(resource.ao):(.data.rel.ro._ZTVN6icu_5913ResourceValueE[_ZTVN6icu_5913ResourceValueE]+0x30): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(resource.ao):(.data.rel.ro._ZTVN6icu_5913ResourceValueE[_ZTVN6icu_5913ResourceValueE]+0x38): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(resource.ao):(.data.rel.ro._ZTVN6icu_5913ResourceValueE[_ZTVN6icu_5913ResourceValueE]+0x40): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(resource.ao):(.data.rel.ro._ZTVN6icu_5913ResourceValueE[_ZTVN6icu_5913ResourceValueE]+0x48): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(resource.ao):(.data.rel.ro._ZTVN6icu_5913ResourceValueE[_ZTVN6icu_5913ResourceValueE]+0x50): more undefined references to `__cxa_pure_virtual' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(stringtriebuilder.ao):(.data.rel.ro._ZTIN6icu_5917StringTrieBuilder4NodeE[_ZTIN6icu_5917StringTrieBuilder4NodeE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(stringtriebuilder.ao):(.data.rel.ro._ZTIN6icu_5917StringTrieBuilder14FinalValueNodeE[_ZTIN6icu_5917StringTrieBuilder14FinalValueNodeE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(stringtriebuilder.ao):(.data.rel.ro._ZTIN6icu_5917StringTrieBuilder9ValueNodeE[_ZTIN6icu_5917StringTrieBuilder9ValueNodeE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(stringtriebuilder.ao):(.data.rel.ro._ZTIN6icu_5917StringTrieBuilder21IntermediateValueNodeE[_ZTIN6icu_5917StringTrieBuilder21IntermediateValueNodeE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(stringtriebuilder.ao):(.data.rel.ro._ZTIN6icu_5917StringTrieBuilder15LinearMatchNodeE[_ZTIN6icu_5917StringTrieBuilder15LinearMatchNodeE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(stringtriebuilder.ao):(.data.rel.ro._ZTIN6icu_5917StringTrieBuilder10BranchNodeE[_ZTIN6icu_5917StringTrieBuilder10BranchNodeE]+0x0): more undefined references to `vtable for __cxxabiv1::__si_class_type_info' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(stringtriebuilder.ao):(.data.rel.ro._ZTVN6icu_5917StringTrieBuilderE[_ZTVN6icu_5917StringTrieBuilderE]+0x28): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(stringtriebuilder.ao):(.data.rel.ro._ZTVN6icu_5917StringTrieBuilderE[_ZTVN6icu_5917StringTrieBuilderE]+0x30): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(stringtriebuilder.ao):(.data.rel.ro._ZTVN6icu_5917StringTrieBuilderE[_ZTVN6icu_5917StringTrieBuilderE]+0x38): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(stringtriebuilder.ao):(.data.rel.ro._ZTVN6icu_5917StringTrieBuilderE[_ZTVN6icu_5917StringTrieBuilderE]+0x40): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(stringtriebuilder.ao):(.data.rel.ro._ZTVN6icu_5917StringTrieBuilderE[_ZTVN6icu_5917StringTrieBuilderE]+0x48): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(stringtriebuilder.ao):(.data.rel.ro._ZTVN6icu_5917StringTrieBuilderE[_ZTVN6icu_5917StringTrieBuilderE]+0x50): more undefined references to `__cxa_pure_virtual' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol.ao): In function `ucol_openBinary_59':
+(.text+0x38): undefined reference to `__dynamic_cast'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol.ao): In function `ucol_cloneBinary_59':
+(.text+0xf3): undefined reference to `__dynamic_cast'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol.ao): In function `ucol_getRules_59':
+(.text+0x7ea): undefined reference to `__dynamic_cast'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol.ao): In function `ucol_getRulesEx_59':
+(.text+0x8a7): undefined reference to `__dynamic_cast'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol.ao): In function `ucol_getLocaleByType_59':
+(.text+0x9a7): undefined reference to `__dynamic_cast'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `(anonymous namespace)::KeywordsSink::put(char const*, icu_59::ResourceValue&, signed char, UErrorCode&)':
+(.text+0x17b): undefined reference to `ulist_containsString_59'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `(anonymous namespace)::KeywordsSink::put(char const*, icu_59::ResourceValue&, signed char, UErrorCode&)':
+(.text+0x192): undefined reference to `ulist_addItemEndList_59'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `(anonymous namespace)::KeywordsSink::put(char const*, icu_59::ResourceValue&, signed char, UErrorCode&)':
+(.text+0x268): undefined reference to `ulist_removeString_59'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `(anonymous namespace)::KeywordsSink::put(char const*, icu_59::ResourceValue&, signed char, UErrorCode&)':
+(.text+0x27d): undefined reference to `ulist_addItemBeginList_59'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `(anonymous namespace)::KeywordsSink::~KeywordsSink()':
+(.text+0x2f3): undefined reference to `ulist_deleteList_59'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `(anonymous namespace)::KeywordsSink::~KeywordsSink()':
+(.text+0x313): undefined reference to `ulist_deleteList_59'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `ucol_getKeywordValuesForLocale_59':
+(.text+0x840): undefined reference to `ulist_createEmptyList_59'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `ucol_getKeywordValuesForLocale_59':
+(.text+0x8bb): undefined reference to `ulist_resetList_59'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `ucol_getKeywordValuesForLocale_59':
+(.text+0x8d8): undefined reference to `ulist_deleteList_59'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `ucol_getKeywordValuesForLocale_59':
+(.text+0x943): undefined reference to `ulist_deleteList_59'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::CollationLoader::CollationLoader(icu_59::CollationCacheEntry const*, icu_59::Locale const&, UErrorCode&)':
+(.text+0x9e8): undefined reference to `icu_59::UnifiedCache::getInstance(UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::CollationLoader::loadFromData(UErrorCode&)':
+(.text+0xe5c): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::CollationLoader::loadFromData(UErrorCode&)':
+(.text+0xe68): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::CollationLoader::loadFromData(UErrorCode&)':
+(.text+0x1033): undefined reference to `icu_59::SharedObject::~SharedObject()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::CollationLoader::getCacheEntry(UErrorCode&)':
+(.text+0x10eb): undefined reference to `icu_59::CacheKeyBase::~CacheKeyBase()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::CollationLoader::getCacheEntry(UErrorCode&)':
+(.text+0x1146): undefined reference to `icu_59::UnifiedCache::_get(icu_59::CacheKeyBase const&, icu_59::SharedObject const*&, void const*, UErrorCode&) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::CollationLoader::getCacheEntry(UErrorCode&)':
+(.text+0x1162): undefined reference to `icu_59::SharedObject::removeRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::CollationLoader::getCacheEntry(UErrorCode&)':
+(.text+0x11a3): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::CollationLoader::getCacheEntry(UErrorCode&)':
+(.text+0x11d9): undefined reference to `icu_59::CacheKeyBase::~CacheKeyBase()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::CollationLoader::getCacheEntry(UErrorCode&)':
+(.text+0x120e): undefined reference to `icu_59::CacheKeyBase::~CacheKeyBase()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::CollationLoader::loadTailoring(icu_59::Locale const&, UErrorCode&)':
+(.text+0x127b): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::CollationLoader::makeCacheEntry(icu_59::Locale const&, icu_59::CollationCacheEntry const*, UErrorCode&)':
+(.text+0x15b9): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::CollationLoader::makeCacheEntry(icu_59::Locale const&, icu_59::CollationCacheEntry const*, UErrorCode&)':
+(.text+0x15c3): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::CollationLoader::makeCacheEntry(icu_59::Locale const&, icu_59::CollationCacheEntry const*, UErrorCode&)':
+(.text+0x15cd): undefined reference to `icu_59::SharedObject::removeRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::CollationLoader::makeCacheEntry(icu_59::Locale const&, icu_59::CollationCacheEntry const*, UErrorCode&)':
+(.text+0x15ec): undefined reference to `icu_59::SharedObject::removeRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::CollationLoader::makeCacheEntry(icu_59::Locale const&, icu_59::CollationCacheEntry const*, UErrorCode&)':
+(.text+0x15fc): undefined reference to `icu_59::SharedObject::~SharedObject()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::CollationLoader::makeCacheEntryFromRoot(icu_59::Locale const&, UErrorCode&) const':
+(.text+0x1639): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::CollationLoader::loadFromLocale(UErrorCode&)':
+(.text+0x1cb5): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::LocaleCacheKey<icu_59::CollationCacheEntry>::clone() const':
+(.text._ZNK6icu_5914LocaleCacheKeyINS_19CollationCacheEntryEE5cloneEv[_ZNK6icu_5914LocaleCacheKeyINS_19CollationCacheEntryEE5cloneEv]+0x5f): undefined reference to `icu_59::CacheKeyBase::~CacheKeyBase()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::LocaleCacheKey<icu_59::CollationCacheEntry>::~LocaleCacheKey()':
+(.text._ZN6icu_5914LocaleCacheKeyINS_19CollationCacheEntryEED2Ev[_ZN6icu_5914LocaleCacheKeyINS_19CollationCacheEntryEED5Ev]+0x2f): undefined reference to `icu_59::CacheKeyBase::~CacheKeyBase()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao): In function `icu_59::LocaleCacheKey<icu_59::CollationCacheEntry>::~LocaleCacheKey()':
+(.text._ZN6icu_5914LocaleCacheKeyINS_19CollationCacheEntryEED0Ev[_ZN6icu_5914LocaleCacheKeyINS_19CollationCacheEntryEED5Ev]+0x2e): undefined reference to `icu_59::CacheKeyBase::~CacheKeyBase()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao):(.data.rel.ro._ZTIN6icu_598CacheKeyINS_19CollationCacheEntryEEE[_ZTIN6icu_598CacheKeyINS_19CollationCacheEntryEEE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao):(.data.rel.ro._ZTIN6icu_598CacheKeyINS_19CollationCacheEntryEEE[_ZTIN6icu_598CacheKeyINS_19CollationCacheEntryEEE]+0x10): undefined reference to `typeinfo for icu_59::CacheKeyBase'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao):(.data.rel.ro._ZTIN6icu_5914LocaleCacheKeyINS_19CollationCacheEntryEEE[_ZTIN6icu_5914LocaleCacheKeyINS_19CollationCacheEntryEEE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao):(.data.rel.ro+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao):(.data.rel.ro+0x70): undefined reference to `ulist_close_keyword_values_iterator_59'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao):(.data.rel.ro+0x78): undefined reference to `ulist_count_keyword_values_59'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao):(.data.rel.ro+0x88): undefined reference to `ulist_next_keyword_value_59'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao):(.data.rel.ro+0x90): undefined reference to `ulist_reset_keyword_values_iterator_59'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao):(.data.rel.ro._ZTVN6icu_598CacheKeyINS_19CollationCacheEntryEEE[_ZTVN6icu_598CacheKeyINS_19CollationCacheEntryEEE]+0x30): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(ucol_res.ao):(.data.rel.ro._ZTVN6icu_598CacheKeyINS_19CollationCacheEntryEEE[_ZTVN6icu_598CacheKeyINS_19CollationCacheEntryEEE]+0x40): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationtailoring.ao): In function `icu_59::CollationTailoring::CollationTailoring(icu_59::CollationSettings const*)':
+(.text+0x2a5): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationtailoring.ao): In function `icu_59::CollationTailoring::CollationTailoring(icu_59::CollationSettings const*)':
+(.text+0x36c): undefined reference to `icu_59::SharedObject::~SharedObject()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationtailoring.ao): In function `icu_59::CollationCacheEntry::~CollationCacheEntry()':
+(.text+0x3a1): undefined reference to `icu_59::SharedObject::removeRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationtailoring.ao): In function `icu_59::CollationTailoring::~CollationTailoring()':
+(.text+0x40e): undefined reference to `icu_59::SharedObject::removeRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationtailoring.ao): In function `icu_59::CollationCacheEntry::~CollationCacheEntry()':
+(.text+0x3be): undefined reference to `icu_59::SharedObject::~SharedObject()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationtailoring.ao): In function `icu_59::CollationTailoring::~CollationTailoring()':
+(.text+0x49d): undefined reference to `icu_59::SharedObject::~SharedObject()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationtailoring.ao):(.data.rel.ro._ZTIN6icu_5918CollationTailoringE[_ZTIN6icu_5918CollationTailoringE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationtailoring.ao):(.data.rel.ro._ZTIN6icu_5918CollationTailoringE[_ZTIN6icu_5918CollationTailoringE]+0x10): undefined reference to `typeinfo for icu_59::SharedObject'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationtailoring.ao):(.data.rel.ro._ZTIN6icu_5919CollationCacheEntryE[_ZTIN6icu_5919CollationCacheEntryE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationtailoring.ao):(.data.rel.ro._ZTIN6icu_5919CollationCacheEntryE[_ZTIN6icu_5919CollationCacheEntryE]+0x10): undefined reference to `typeinfo for icu_59::SharedObject'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationdatareader.ao): In function `icu_59::CollationDataReader::read(icu_59::CollationTailoring const*, unsigned char const*, int, icu_59::CollationTailoring&, UErrorCode&)':
+(.text+0x3c7): undefined reference to `icu_59::SharedObject::getRefCount() const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationdatareader.ao): In function `icu_59::CollationDataReader::read(icu_59::CollationTailoring const*, unsigned char const*, int, icu_59::CollationTailoring&, UErrorCode&)':
+(.text+0x3fb): undefined reference to `icu_59::SharedObject::removeRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationdatareader.ao): In function `icu_59::CollationDataReader::read(icu_59::CollationTailoring const*, unsigned char const*, int, icu_59::CollationTailoring&, UErrorCode&)':
+(.text+0x409): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationdatareader.ao): In function `icu_59::CollationDataReader::read(icu_59::CollationTailoring const*, unsigned char const*, int, icu_59::CollationTailoring&, UErrorCode&)':
+(.text+0x704): undefined reference to `uset_getSerializedSet_59'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationdatareader.ao): In function `icu_59::CollationDataReader::read(icu_59::CollationTailoring const*, unsigned char const*, int, icu_59::CollationTailoring&, UErrorCode&)':
+(.text+0x716): undefined reference to `uset_getSerializedRangeCount_59'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationdatareader.ao): In function `icu_59::CollationDataReader::read(icu_59::CollationTailoring const*, unsigned char const*, int, icu_59::CollationTailoring&, UErrorCode&)':
+(.text+0x758): undefined reference to `uset_getSerializedRange_59'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::operator=(icu_59::RuleBasedCollator const&)':
+(.text+0x1898): undefined reference to `icu_59::SharedObject::removeRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::operator=(icu_59::RuleBasedCollator const&)':
+(.text+0x18ab): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::operator=(icu_59::RuleBasedCollator const&)':
+(.text+0x18cc): undefined reference to `icu_59::SharedObject::removeRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::operator=(icu_59::RuleBasedCollator const&)':
+(.text+0x18df): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::setAttribute(UColAttribute, UColAttributeValue, UErrorCode&)':
+(.text+0x1ffd): undefined reference to `icu_59::SharedObject::getRefCount() const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::setAttribute(UColAttribute, UColAttributeValue, UErrorCode&)':
+(.text+0x202c): undefined reference to `icu_59::SharedObject::removeRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::setAttribute(UColAttribute, UColAttributeValue, UErrorCode&)':
+(.text+0x203a): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::setMaxVariable(UColReorderCode, UErrorCode&)':
+(.text+0x22bc): undefined reference to `icu_59::SharedObject::getRefCount() const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::setMaxVariable(UColReorderCode, UErrorCode&)':
+(.text+0x22f2): undefined reference to `icu_59::SharedObject::removeRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::setMaxVariable(UColReorderCode, UErrorCode&)':
+(.text+0x2305): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::setVariableTop(unsigned int, UErrorCode&)':
+(.text+0x247c): undefined reference to `icu_59::SharedObject::getRefCount() const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::setVariableTop(unsigned int, UErrorCode&)':
+(.text+0x24ab): undefined reference to `icu_59::SharedObject::removeRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::setVariableTop(unsigned int, UErrorCode&)':
+(.text+0x24b9): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::setReorderCodes(int const*, int, UErrorCode&)':
+(.text+0x25a5): undefined reference to `icu_59::SharedObject::getRefCount() const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::setReorderCodes(int const*, int, UErrorCode&)':
+(.text+0x25d5): undefined reference to `icu_59::SharedObject::removeRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::setReorderCodes(int const*, int, UErrorCode&)':
+(.text+0x25e3): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::setReorderCodes(int const*, int, UErrorCode&)':
+(.text+0x2684): undefined reference to `icu_59::SharedObject::getRefCount() const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::setReorderCodes(int const*, int, UErrorCode&)':
+(.text+0x26b0): undefined reference to `icu_59::SharedObject::removeRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::setReorderCodes(int const*, int, UErrorCode&)':
+(.text+0x26be): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::internalGetCEs(icu_59::UnicodeString const&, icu_59::UVector64&, UErrorCode&) const':
+(.text+0x35b3): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::internalGetCEs(icu_59::UnicodeString const&, icu_59::UVector64&, UErrorCode&) const':
+(.text+0x374b): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::RuleBasedCollator(icu_59::RuleBasedCollator const&)':
+(.text+0x3d1d): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::RuleBasedCollator(icu_59::RuleBasedCollator const&)':
+(.text+0x3d28): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::RuleBasedCollator(icu_59::CollationCacheEntry const*)':
+(.text+0x3e22): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::RuleBasedCollator(icu_59::CollationCacheEntry const*)':
+(.text+0x3e2d): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::~RuleBasedCollator()':
+(.text+0x3e7e): undefined reference to `icu_59::SharedObject::removeRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::~RuleBasedCollator()':
+(.text+0x3e96): undefined reference to `icu_59::SharedObject::removeRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::adoptTailoring(icu_59::CollationTailoring*, UErrorCode&)':
+(.text+0x3f62): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::adoptTailoring(icu_59::CollationTailoring*, UErrorCode&)':
+(.text+0x3f7d): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::adoptTailoring(icu_59::CollationTailoring*, UErrorCode&)':
+(.text+0x3f8c): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::adoptTailoring(icu_59::CollationTailoring*, UErrorCode&)':
+(.text+0x3fdf): undefined reference to `icu_59::SharedObject::~SharedObject()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::hashCode() const':
+(.text+0x458c): undefined reference to `icu_59::UnicodeSetIterator::UnicodeSetIterator(icu_59::UnicodeSet const&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::hashCode() const':
+(.text+0x45da): undefined reference to `icu_59::UnicodeSetIterator::next()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::hashCode() const':
+(.text+0x465c): undefined reference to `icu_59::UnicodeSetIterator::~UnicodeSetIterator()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::hashCode() const':
+(.text+0x4681): undefined reference to `icu_59::UnicodeSetIterator::~UnicodeSetIterator()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::adoptTailoring(icu_59::CollationTailoring*, UErrorCode&)':
+(.text+0x3eea): undefined reference to `icu_59::SharedObject::deleteIfZeroRefCount() const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao): In function `icu_59::RuleBasedCollator::adoptTailoring(icu_59::CollationTailoring*, UErrorCode&)':
+(.text+0x3fcc): undefined reference to `icu_59::SharedObject::deleteIfZeroRefCount() const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao):(.data.rel.ro._ZTIN6icu_5917RuleBasedCollatorE[_ZTIN6icu_5917RuleBasedCollatorE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao):(.data.rel.ro+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao):(.data.rel.ro+0x18): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao):(.data.rel.ro+0x30): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao):(.data.rel.ro+0x48): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao):(.data.rel.ro+0x60): more undefined references to `vtable for __cxxabiv1::__si_class_type_info' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao):(.data.rel.ro+0x108): undefined reference to `icu_59::ByteSink::Flush()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao):(.data.rel.ro+0x148): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao):(.data.rel.ro._ZTIN6icu_5920CollationKeyByteSinkE[_ZTIN6icu_5920CollationKeyByteSinkE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rulebasedcollator.ao):(.data.rel.ro._ZTVN6icu_5920CollationKeyByteSinkE[_ZTVN6icu_5920CollationKeyByteSinkE]+0x30): undefined reference to `icu_59::ByteSink::Flush()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationroot.ao): In function `uprv_collation_root_cleanup':
+(.text+0x13): undefined reference to `icu_59::SharedObject::removeRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationroot.ao): In function `icu_59::CollationRoot::load(UErrorCode&)':
+(.text+0x18f): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationroot.ao): In function `icu_59::CollationRoot::load(UErrorCode&)':
+(.text+0x199): undefined reference to `icu_59::SharedObject::addRef(signed char) const'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationroot.ao): In function `icu_59::CollationRoot::load(UErrorCode&)':
+(.text+0x1e0): undefined reference to `icu_59::SharedObject::~SharedObject()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(coleitr.ao): In function `icu_59::CollationElementIterator::operator=(icu_59::CollationElementIterator const&)':
+(.text+0x112f): undefined reference to `__dynamic_cast'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(coleitr.ao): In function `icu_59::CollationElementIterator::operator=(icu_59::CollationElementIterator const&)':
+(.text+0x1228): undefined reference to `__dynamic_cast'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(coleitr.ao):(.data.rel.ro._ZTIN6icu_5924CollationElementIteratorE[_ZTIN6icu_5924CollationElementIteratorE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(coleitr.ao):(.data.rel.ro+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(sortkey.ao):(.data.rel.ro._ZTIN6icu_5912CollationKeyE[_ZTIN6icu_5912CollationKeyE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsettings.ao): In function `icu_59::CollationSettings::CollationSettings(icu_59::CollationSettings const&)':
+(.text+0x4a4): undefined reference to `icu_59::SharedObject::~SharedObject()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsettings.ao): In function `icu_59::CollationSettings::~CollationSettings()':
+(.text+0x27): undefined reference to `icu_59::SharedObject::~SharedObject()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsettings.ao):(.data.rel.ro._ZTIN6icu_5917CollationSettingsE[_ZTIN6icu_5917CollationSettingsE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsettings.ao):(.data.rel.ro._ZTIN6icu_5917CollationSettingsE[_ZTIN6icu_5917CollationSettingsE]+0x10): undefined reference to `typeinfo for icu_59::SharedObject'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationiterator.ao):(.data.rel.ro._ZTIN6icu_5917CollationIteratorE[_ZTIN6icu_5917CollationIteratorE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationiterator.ao):(.data.rel.ro._ZTVN6icu_5917CollationIteratorE[_ZTVN6icu_5917CollationIteratorE]+0x30): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationiterator.ao):(.data.rel.ro._ZTVN6icu_5917CollationIteratorE[_ZTVN6icu_5917CollationIteratorE]+0x38): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationiterator.ao):(.data.rel.ro._ZTVN6icu_5917CollationIteratorE[_ZTVN6icu_5917CollationIteratorE]+0x40): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationiterator.ao):(.data.rel.ro._ZTVN6icu_5917CollationIteratorE[_ZTVN6icu_5917CollationIteratorE]+0x48): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationiterator.ao):(.data.rel.ro._ZTVN6icu_5917CollationIteratorE[_ZTVN6icu_5917CollationIteratorE]+0x70): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationiterator.ao):(.data.rel.ro._ZTVN6icu_5917CollationIteratorE[_ZTVN6icu_5917CollationIteratorE]+0x78): more undefined references to `__cxa_pure_virtual' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(utf16collationiterator.ao):(.data.rel.ro._ZTIN6icu_5922UTF16CollationIteratorE[_ZTIN6icu_5922UTF16CollationIteratorE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(utf16collationiterator.ao):(.data.rel.ro._ZTIN6icu_5925FCDUTF16CollationIteratorE[_ZTIN6icu_5925FCDUTF16CollationIteratorE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(utf8collationiterator.ao):(.data.rel.ro._ZTIN6icu_5921UTF8CollationIteratorE[_ZTIN6icu_5921UTF8CollationIteratorE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(utf8collationiterator.ao):(.data.rel.ro._ZTIN6icu_5924FCDUTF8CollationIteratorE[_ZTIN6icu_5924FCDUTF8CollationIteratorE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(uitercollationiterator.ao):(.data.rel.ro._ZTIN6icu_5922UIterCollationIteratorE[_ZTIN6icu_5922UIterCollationIteratorE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(uitercollationiterator.ao):(.data.rel.ro._ZTIN6icu_5925FCDUIterCollationIteratorE[_ZTIN6icu_5925FCDUIterCollationIteratorE]+0x0): more undefined references to `vtable for __cxxabiv1::__si_class_type_info' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::addContractions(int, char16_t const*)':
+(.text+0x204): undefined reference to `icu_59::UCharsTrie::Iterator::Iterator(icu_59::ConstChar16Ptr, int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::addContractions(int, char16_t const*)':
+(.text+0x225): undefined reference to `icu_59::UCharsTrie::Iterator::next(UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::addContractions(int, char16_t const*)':
+(.text+0x231): undefined reference to `icu_59::UCharsTrie::Iterator::~Iterator()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::addContractions(int, char16_t const*)':
+(.text+0x264): undefined reference to `icu_59::UCharsTrie::Iterator::~Iterator()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::addPrefixes(icu_59::CollationData const*, int, char16_t const*)':
+(.text+0x3e9): undefined reference to `icu_59::UCharsTrie::Iterator::Iterator(icu_59::ConstChar16Ptr, int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::addPrefixes(icu_59::CollationData const*, int, char16_t const*)':
+(.text+0x415): undefined reference to `icu_59::UCharsTrie::Iterator::next(UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::addPrefixes(icu_59::CollationData const*, int, char16_t const*)':
+(.text+0x421): undefined reference to `icu_59::UCharsTrie::Iterator::~Iterator()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::addPrefixes(icu_59::CollationData const*, int, char16_t const*)':
+(.text+0x456): undefined reference to `icu_59::UCharsTrie::Iterator::~Iterator()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::comparePrefixes(int, char16_t const*, char16_t const*)':
+(.text+0x592): undefined reference to `icu_59::UCharsTrie::Iterator::Iterator(icu_59::ConstChar16Ptr, int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::comparePrefixes(int, char16_t const*, char16_t const*)':
+(.text+0x5af): undefined reference to `icu_59::UCharsTrie::Iterator::Iterator(icu_59::ConstChar16Ptr, int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::comparePrefixes(int, char16_t const*, char16_t const*)':
+(.text+0x5e0): undefined reference to `icu_59::UCharsTrie::Iterator::next(UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::comparePrefixes(int, char16_t const*, char16_t const*)':
+(.text+0x688): undefined reference to `icu_59::UCharsTrie::Iterator::next(UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::comparePrefixes(int, char16_t const*, char16_t const*)':
+(.text+0x6f0): undefined reference to `icu_59::UCharsTrie::Iterator::next(UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::comparePrefixes(int, char16_t const*, char16_t const*)':
+(.text+0x795): undefined reference to `icu_59::UCharsTrie::Iterator::next(UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::comparePrefixes(int, char16_t const*, char16_t const*)':
+(.text+0x7c0): undefined reference to `icu_59::UCharsTrie::Iterator::next(UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::comparePrefixes(int, char16_t const*, char16_t const*)':
+(.text+0x7ec): undefined reference to `icu_59::UCharsTrie::Iterator::~Iterator()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::comparePrefixes(int, char16_t const*, char16_t const*)':
+(.text+0x7f6): undefined reference to `icu_59::UCharsTrie::Iterator::~Iterator()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::comparePrefixes(int, char16_t const*, char16_t const*)':
+(.text+0x834): undefined reference to `icu_59::UCharsTrie::Iterator::~Iterator()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::comparePrefixes(int, char16_t const*, char16_t const*)':
+(.text+0x83e): undefined reference to `icu_59::UCharsTrie::Iterator::~Iterator()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::compareContractions(int, char16_t const*, char16_t const*)':
+(.text+0xee2): undefined reference to `icu_59::UCharsTrie::Iterator::Iterator(icu_59::ConstChar16Ptr, int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::compareContractions(int, char16_t const*, char16_t const*)':
+(.text+0xeff): undefined reference to `icu_59::UCharsTrie::Iterator::Iterator(icu_59::ConstChar16Ptr, int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::compareContractions(int, char16_t const*, char16_t const*)':
+(.text+0xf4c): undefined reference to `icu_59::UCharsTrie::Iterator::next(UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::compareContractions(int, char16_t const*, char16_t const*)':
+(.text+0xfec): undefined reference to `icu_59::UCharsTrie::Iterator::next(UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::compareContractions(int, char16_t const*, char16_t const*)':
+(.text+0x1044): undefined reference to `icu_59::UCharsTrie::Iterator::next(UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::compareContractions(int, char16_t const*, char16_t const*)':
+(.text+0x10ba): undefined reference to `icu_59::UCharsTrie::Iterator::next(UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::compareContractions(int, char16_t const*, char16_t const*)':
+(.text+0x10dc): undefined reference to `icu_59::UCharsTrie::Iterator::~Iterator()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::compareContractions(int, char16_t const*, char16_t const*)':
+(.text+0x10e6): undefined reference to `icu_59::UCharsTrie::Iterator::~Iterator()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::compareContractions(int, char16_t const*, char16_t const*)':
+(.text+0x1124): undefined reference to `icu_59::UCharsTrie::Iterator::~Iterator()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::TailoredSet::compareContractions(int, char16_t const*, char16_t const*)':
+(.text+0x112e): undefined reference to `icu_59::UCharsTrie::Iterator::~Iterator()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::ContractionsAndExpansions::handlePrefixes(int, int, unsigned int)':
+(.text+0x1c23): undefined reference to `icu_59::UCharsTrie::Iterator::Iterator(icu_59::ConstChar16Ptr, int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::ContractionsAndExpansions::handlePrefixes(int, int, unsigned int)':
+(.text+0x1c77): undefined reference to `icu_59::UCharsTrie::Iterator::next(UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::ContractionsAndExpansions::handlePrefixes(int, int, unsigned int)':
+(.text+0x1cc2): undefined reference to `icu_59::UCharsTrie::Iterator::~Iterator()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::ContractionsAndExpansions::handlePrefixes(int, int, unsigned int)':
+(.text+0x1cdf): undefined reference to `icu_59::UCharsTrie::Iterator::~Iterator()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::ContractionsAndExpansions::handleContractions(int, int, unsigned int)':
+(.text+0x1d58): undefined reference to `icu_59::UCharsTrie::Iterator::Iterator(icu_59::ConstChar16Ptr, int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::ContractionsAndExpansions::handleContractions(int, int, unsigned int)':
+(.text+0x1db7): undefined reference to `icu_59::UCharsTrie::Iterator::next(UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::ContractionsAndExpansions::handleContractions(int, int, unsigned int)':
+(.text+0x1dce): undefined reference to `icu_59::UCharsTrie::Iterator::~Iterator()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao): In function `icu_59::ContractionsAndExpansions::handleContractions(int, int, unsigned int)':
+(.text+0x1e28): undefined reference to `icu_59::UCharsTrie::Iterator::~Iterator()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationsets.ao):(.data.rel.ro._ZTIN6icu_5925ContractionsAndExpansions6CESinkE[_ZTIN6icu_5925ContractionsAndExpansions6CESinkE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationkeys.ao): In function `icu_59::SortKeyByteSink::~SortKeyByteSink()':
+(.text+0x35f): undefined reference to `icu_59::ByteSink::~ByteSink()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationkeys.ao):(.data.rel.ro._ZTIN6icu_5915SortKeyByteSinkE[_ZTIN6icu_5915SortKeyByteSinkE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationkeys.ao):(.data.rel.ro._ZTIN6icu_5915SortKeyByteSinkE[_ZTIN6icu_5915SortKeyByteSinkE]+0x10): undefined reference to `typeinfo for icu_59::ByteSink'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationkeys.ao):(.data.rel.ro._ZTIN6icu_5913CollationKeys13LevelCallbackE[_ZTIN6icu_5913CollationKeys13LevelCallbackE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationkeys.ao):(.data.rel.ro._ZTVN6icu_5915SortKeyByteSinkE[_ZTVN6icu_5915SortKeyByteSinkE]+0x30): undefined reference to `icu_59::ByteSink::Flush()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationkeys.ao):(.data.rel.ro._ZTVN6icu_5915SortKeyByteSinkE[_ZTVN6icu_5915SortKeyByteSinkE]+0x38): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(collationkeys.ao):(.data.rel.ro._ZTVN6icu_5915SortKeyByteSinkE[_ZTVN6icu_5915SortKeyByteSinkE]+0x40): undefined reference to `__cxa_pure_virtual'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::setStackLimit(int, UErrorCode&)':
+(.text+0x1cc4): undefined reference to `icu_59::UVector64::setMaxCapacity(int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::setStackLimit(int, UErrorCode&)':
+(.text+0x1ce2): undefined reference to `icu_59::UVector64::setMaxCapacity(int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::init2(UText*, UErrorCode&)':
+(.text+0x1d71): undefined reference to `icu_59::UVector64::UVector64(UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::resetStack()':
+(.text+0x230f): undefined reference to `icu_59::UVector64::removeAllElements()'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::resetStack()':
+(.text+0x2393): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchAt(long, signed char, UErrorCode&)':
+(.text+0x2bde): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchAt(long, signed char, UErrorCode&)':
+(.text+0x2fe6): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchAt(long, signed char, UErrorCode&)':
+(.text+0x397a): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchAt(long, signed char, UErrorCode&)':
+(.text+0x3c03): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchAt(long, signed char, UErrorCode&)':
+(.text+0x45fb): undefined reference to `icu_59::UVector64::setSize(int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchAt(long, signed char, UErrorCode&)':
+(.text+0x4dad): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchAt(long, signed char, UErrorCode&)':
+(.text+0x4ea3): undefined reference to `icu_59::UVector64::setSize(int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchAt(long, signed char, UErrorCode&)':
+(.text+0x50e5): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchAt(long, signed char, UErrorCode&)':
+(.text+0x5149): undefined reference to `icu_59::UVector64::setSize(int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchAt(long, signed char, UErrorCode&)':
+(.text+0x5c85): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchAt(long, signed char, UErrorCode&)':
+(.text+0x5d03): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchAt(long, signed char, UErrorCode&)':
+(.text+0x5e25): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchAt(long, signed char, UErrorCode&)':
+(.text+0x6187): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchAt(long, signed char, UErrorCode&)':
+(.text+0x61f5): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao):(.text+0x6265): more undefined references to `icu_59::UVector64::expandCapacity(int, UErrorCode&)' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchChunkAt(int, signed char, UErrorCode&)':
+(.text+0x7b9a): undefined reference to `icu_59::UVector64::setSize(int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchChunkAt(int, signed char, UErrorCode&)':
+(.text+0x7d17): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchChunkAt(int, signed char, UErrorCode&)':
+(.text+0x7f59): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchChunkAt(int, signed char, UErrorCode&)':
+(.text+0x89c2): undefined reference to `icu_59::UVector64::setSize(int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchChunkAt(int, signed char, UErrorCode&)':
+(.text+0x8a8f): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchChunkAt(int, signed char, UErrorCode&)':
+(.text+0x8b9f): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchChunkAt(int, signed char, UErrorCode&)':
+(.text+0x8c03): undefined reference to `icu_59::UVector64::setSize(int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchChunkAt(int, signed char, UErrorCode&)':
+(.text+0x945b): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchChunkAt(int, signed char, UErrorCode&)':
+(.text+0x94c8): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchChunkAt(int, signed char, UErrorCode&)':
+(.text+0x993f): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchChunkAt(int, signed char, UErrorCode&)':
+(.text+0x9c08): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao): In function `icu_59::RegexMatcher::MatchChunkAt(int, signed char, UErrorCode&)':
+(.text+0x9c79): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao):(.text+0x9ceb): more undefined references to `icu_59::UVector64::expandCapacity(int, UErrorCode&)' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(rematch.ao):(.data.rel.ro._ZTIN6icu_5912RegexMatcherE[_ZTIN6icu_5912RegexMatcherE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(repattrn.ao): In function `icu_59::RegexPattern::init()':
+(.text+0x3c2): undefined reference to `icu_59::UVector64::UVector64(UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(repattrn.ao): In function `icu_59::RegexPattern::operator=(icu_59::RegexPattern const&)':
+(.text+0x994): undefined reference to `icu_59::UVector64::assign(icu_59::UVector64 const&, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(repattrn.ao): In function `icu_59::RegexPattern::operator=(icu_59::RegexPattern const&)':
+(.text+0xbc8): undefined reference to `__cxa_throw_bad_array_new_length'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(repattrn.ao):(.data.rel.ro._ZTIN6icu_5912RegexPatternE[_ZTIN6icu_5912RegexPatternE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::insertOp(int)':
+(.text+0x228): undefined reference to `icu_59::UVector64::insertElementAt(long, int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::insertOp(int)':
+(.text+0x347): undefined reference to `icu_59::UVector64::setElementAt(long, int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::appendOp(int)':
+(.text+0x3c4): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::blockTopLoc(signed char)':
+(.text+0x7b1): undefined reference to `icu_59::UVector64::insertElementAt(long, int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::compileInlineInterval()':
+(.text+0x8d3): undefined reference to `icu_59::UVector64::setSize(int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::compileInlineInterval()':
+(.text+0x928): undefined reference to `icu_59::UVector64::setElementAt(long, int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::compileInterval(int, int)':
+(.text+0xa8c): undefined reference to `icu_59::UVector64::setElementAt(long, int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::compileInterval(int, int)':
+(.text+0xab7): undefined reference to `icu_59::UVector64::setElementAt(long, int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::compileInterval(int, int)':
+(.text+0xace): undefined reference to `icu_59::UVector64::setElementAt(long, int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::compileInterval(int, int)':
+(.text+0xae5): undefined reference to `icu_59::UVector64::setElementAt(long, int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao):(.text+0x1681): more undefined references to `icu_59::UVector64::setElementAt(long, int)' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::stripNOPs()':
+(.text+0x1b9b): undefined reference to `icu_59::UVector64::setSize(int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::stripNOPs()':
+(.text+0x1c10): undefined reference to `icu_59::UVector64::setElementAt(long, int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::stripNOPs()':
+(.text+0x1c56): undefined reference to `icu_59::UVector64::setElementAt(long, int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::findCaseInsensitiveStarters(int, icu_59::UnicodeSet*)':
+(.text+0x24d9): undefined reference to `icu_59::UnicodeSet::closeOver(int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::matchStartType()':
+(.text+0x299a): undefined reference to `icu_59::UnicodeSet::closeOver(int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::createSetForProperty(icu_59::UnicodeString const&, signed char)':
+(.text+0x3105): undefined reference to `icu_59::UnicodeSet::UnicodeSet(icu_59::UnicodeString const&, unsigned int, icu_59::SymbolTable const*, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::createSetForProperty(icu_59::UnicodeString const&, signed char)':
+(.text+0x3c83): undefined reference to `icu_59::UnicodeSet::UnicodeSet(icu_59::UnicodeString const&, unsigned int, icu_59::SymbolTable const*, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::createSetForProperty(icu_59::UnicodeString const&, signed char)':
+(.text+0x433b): undefined reference to `icu_59::UnicodeSet::closeOver(int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::setEval(int)':
+(.text+0x5319): undefined reference to `icu_59::UnicodeSet::closeOver(int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::doParseActions(int)':
+(.text+0x555e): undefined reference to `icu_59::UVector64::setElementAt(long, int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::doParseActions(int)':
+(.text+0x598d): undefined reference to `icu_59::UVector64::setElementAt(long, int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::doParseActions(int)':
+(.text+0x5a77): undefined reference to `icu_59::UVector64::setElementAt(long, int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::doParseActions(int)':
+(.text+0x60c4): undefined reference to `icu_59::UVector64::setElementAt(long, int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::doParseActions(int)':
+(.text+0x6103): undefined reference to `icu_59::UVector64::expandCapacity(int, UErrorCode&)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::doParseActions(int)':
+(.text+0x6bd8): undefined reference to `icu_59::UVector64::setElementAt(long, int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::doParseActions(int)':
+(.text+0x6f66): undefined reference to `icu_59::UVector64::setElementAt(long, int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::doParseActions(int)':
+(.text+0x6f93): undefined reference to `icu_59::UVector64::setElementAt(long, int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::doParseActions(int)':
+(.text+0x7088): undefined reference to `icu_59::UVector64::setElementAt(long, int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::doParseActions(int)':
+(.text+0x7165): undefined reference to `icu_59::UVector64::setElementAt(long, int)'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao):(.text+0x7805): more undefined references to `icu_59::UVector64::setElementAt(long, int)' follow
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao): In function `icu_59::RegexCompile::compile(UText*, UParseError&, UErrorCode&)':
+(.text+0x8355): undefined reference to `__cxa_throw_bad_array_new_length'
+/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao):(.data.rel.ro._ZTIN6icu_5912RegexCompileE[_ZTIN6icu_5912RegexCompileE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
+collect2: error: ld returned 1 exit status
+*** Deleting temp files:
+Deleting: /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13939_0/ghc_1.c /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13939_0/ghc_3.rsp /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13939_0/ghc_4.s /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13939_0/ghc_6.rsp /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13939_0/ghc_7.rsp /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13939_0/ghc_2.o /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13939_0/ghc_5.o
+*** Deleting temp dirs:
+Deleting: /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc13939_0
+`cc' failed in phase `Linker'. (Exit code: 1)
+builder for '/nix/store/lrqq1lrffp0shq3cnfsxij0d7aq2rw3w-text-icu-static-example-0.1.0.0.drv' failed with exit code 1
+error: build of '/nix/store/lrqq1lrffp0shq3cnfsxij0d7aq2rw3w-text-icu-static-example-0.1.0.0.drv' failed
