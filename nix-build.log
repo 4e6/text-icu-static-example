@@ -1,11 +1,11 @@
 these derivations will be built:
-  /nix/store/vnk47qavrbwiccyi6g9ici7qdw1wdxzm-text-icu-static-example-0.1.0.0.drv
-building '/nix/store/vnk47qavrbwiccyi6g9ici7qdw1wdxzm-text-icu-static-example-0.1.0.0.drv'...
+  /nix/store/qq5s3x9045ck7xr4l01s58n47yp8qhjn-text-icu-static-example-0.1.0.0.drv
+building '/nix/store/qq5s3x9045ck7xr4l01s58n47yp8qhjn-text-icu-static-example-0.1.0.0.drv'...
 setupCompilerEnvironmentPhase
 Build with /nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3.
 ignoring (possibly broken) abi-depends field for packages
 unpacking sources
-unpacking source archive /nix/store/n5kshpy9jxvg5j4dh5w83srgw4hv1gn4-text-icu-static-example
+unpacking source archive /nix/store/q7cnb7mhb1akw12b5dngryf5amma1spw-text-icu-static-example
 source root is text-icu-static-example
 patching sources
 compileBuildDriverPhase
@@ -13,7 +13,7 @@ setupCompileFlags: -package-db=/tmp/nix-build-text-icu-static-example-0.1.0.0.dr
 [1 of 1] Compiling Main             ( Setup.hs, /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/Main.o )
 Linking Setup ...
 configuring
-configureFlags: --verbose --prefix=/nix/store/fs99n80kqblclvyhlpbmh8iz438ybcin-text-icu-static-example-0.1.0.0 --libdir=$prefix/lib/$compiler --libsubdir=$pkgid --docdir=/nix/store/kyzcaxv20rmls0zssq5axjs3sp3xlw3k-text-icu-static-example-0.1.0.0-doc/share/doc --with-gcc=gcc --package-db=/tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/package.conf.d --ghc-option=-j4 --disable-split-objs --disable-library-profiling --disable-profiling --disable-shared --disable-coverage --enable-library-vanilla --disable-executable-dynamic --enable-tests --ghc-option=-split-sections --ghc-option=-optl=-static --ghc-option=-optl=-pthread --ghc-option=-optl=-L/nix/store/m9qzh7zv0pvkarprpda5zy68myq43iqs-glibc-2.26-131-static/lib --ghc-option=-optl=-L/nix/store/p5b8ashcchqzwlv1vcbzq98cqmfmvfky-gmp-6.1.2/lib --ghc-option=-optl=-L/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib --ghc-option=-optl=-licui18n --ghc-option=-optl=-licuio --ghc-option=-optl=-licuuc --ghc-option=-optl=-licudata --ghc-option=-optl=-ldl --ghc-option=-optl=-lm --ghc-option=-optl=-lstdc++ --extra-lib-dirs=/nix/store/54cwjh1lsmjpk2cbs43gw89w4zhk3ybb-ncurses-6.0-20171125/lib --extra-lib-dirs=/nix/store/wc2ll61lypsv9yig6mvy73c0lw1dp15a-gmp-6.1.2/lib --extra-lib-dirs=/nix/store/54cwjh1lsmjpk2cbs43gw89w4zhk3ybb-ncurses-6.0-20171125/lib
+configureFlags: --verbose --prefix=/nix/store/fyh4ji5qpqd74kgghivv9hdnkcj3f5fl-text-icu-static-example-0.1.0.0 --libdir=$prefix/lib/$compiler --libsubdir=$pkgid --docdir=/nix/store/mij7gxm3mmccwl5a4559nkznf872krcj-text-icu-static-example-0.1.0.0-doc/share/doc --with-gcc=gcc --package-db=/tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/package.conf.d --ghc-option=-j4 --disable-split-objs --disable-library-profiling --disable-profiling --disable-shared --disable-coverage --enable-library-vanilla --disable-executable-dynamic --enable-tests --ghc-option=-split-sections --ghc-option=-optl=-static --ghc-option=-optl=-pthread --ghc-option=-optl=-L/nix/store/m9qzh7zv0pvkarprpda5zy68myq43iqs-glibc-2.26-131-static/lib --ghc-option=-optl=-L/nix/store/p5b8ashcchqzwlv1vcbzq98cqmfmvfky-gmp-6.1.2/lib --ghc-option=-optl=-L/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib --ghc-option=-optl=-licui18n --ghc-option=-optl=-licuio --ghc-option=-optl=-licuuc --ghc-option=-optl=-licudata --ghc-option=-optl=-ldl --ghc-option=-optl=-lm --ghc-option=-optl=-lstdc++ --extra-lib-dirs=/nix/store/54cwjh1lsmjpk2cbs43gw89w4zhk3ybb-ncurses-6.0-20171125/lib --extra-lib-dirs=/nix/store/wc2ll61lypsv9yig6mvy73c0lw1dp15a-gmp-6.1.2/lib --extra-lib-dirs=/nix/store/54cwjh1lsmjpk2cbs43gw89w4zhk3ybb-ncurses-6.0-20171125/lib
 Using Parsec parser
 Configuring text-icu-static-example-0.1.0.0...
 Dependency base >=4.10 && <5: using base-4.11.1.0
@@ -38,21 +38,21 @@ Ready component graph:
 Using Cabal-2.2.0.1 compiled by ghc-8.4
 Using compiler: ghc-8.4.3
 Using install prefix:
-/nix/store/fs99n80kqblclvyhlpbmh8iz438ybcin-text-icu-static-example-0.1.0.0
+/nix/store/fyh4ji5qpqd74kgghivv9hdnkcj3f5fl-text-icu-static-example-0.1.0.0
 Executables installed in:
-/nix/store/fs99n80kqblclvyhlpbmh8iz438ybcin-text-icu-static-example-0.1.0.0/bin
+/nix/store/fyh4ji5qpqd74kgghivv9hdnkcj3f5fl-text-icu-static-example-0.1.0.0/bin
 Libraries installed in:
-/nix/store/fs99n80kqblclvyhlpbmh8iz438ybcin-text-icu-static-example-0.1.0.0/lib/ghc-8.4.3/text-icu-static-example-0.1.0.0
+/nix/store/fyh4ji5qpqd74kgghivv9hdnkcj3f5fl-text-icu-static-example-0.1.0.0/lib/ghc-8.4.3/text-icu-static-example-0.1.0.0
 Dynamic Libraries installed in:
-/nix/store/fs99n80kqblclvyhlpbmh8iz438ybcin-text-icu-static-example-0.1.0.0/lib/ghc-8.4.3/x86_64-linux-ghc-8.4.3
+/nix/store/fyh4ji5qpqd74kgghivv9hdnkcj3f5fl-text-icu-static-example-0.1.0.0/lib/ghc-8.4.3/x86_64-linux-ghc-8.4.3
 Private executables installed in:
-/nix/store/fs99n80kqblclvyhlpbmh8iz438ybcin-text-icu-static-example-0.1.0.0/libexec/x86_64-linux-ghc-8.4.3/text-icu-static-example-0.1.0.0
+/nix/store/fyh4ji5qpqd74kgghivv9hdnkcj3f5fl-text-icu-static-example-0.1.0.0/libexec/x86_64-linux-ghc-8.4.3/text-icu-static-example-0.1.0.0
 Data files installed in:
-/nix/store/fs99n80kqblclvyhlpbmh8iz438ybcin-text-icu-static-example-0.1.0.0/share/x86_64-linux-ghc-8.4.3/text-icu-static-example-0.1.0.0
+/nix/store/fyh4ji5qpqd74kgghivv9hdnkcj3f5fl-text-icu-static-example-0.1.0.0/share/x86_64-linux-ghc-8.4.3/text-icu-static-example-0.1.0.0
 Documentation installed in:
-/nix/store/kyzcaxv20rmls0zssq5axjs3sp3xlw3k-text-icu-static-example-0.1.0.0-doc/share/doc
+/nix/store/mij7gxm3mmccwl5a4559nkznf872krcj-text-icu-static-example-0.1.0.0-doc/share/doc
 Configuration files installed in:
-/nix/store/fs99n80kqblclvyhlpbmh8iz438ybcin-text-icu-static-example-0.1.0.0/etc
+/nix/store/fyh4ji5qpqd74kgghivv9hdnkcj3f5fl-text-icu-static-example-0.1.0.0/etc
 No alex found
 Using ar found on system at:
 /nix/store/k8b9hqv58dd1z0j4ikak24ykndcm91s6-binutils-2.28.1/bin/ar
@@ -732,5 +732,5 @@ Linker.c:(.text.internal_dlopen+0x7): warning: Using 'dlopen' in statically link
 /nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao):(.data.rel.ro._ZTIN6icu_5912RegexCompileE[_ZTIN6icu_5912RegexCompileE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
 collect2: error: ld returned 1 exit status
 `cc' failed in phase `Linker'. (Exit code: 1)
-builder for '/nix/store/vnk47qavrbwiccyi6g9ici7qdw1wdxzm-text-icu-static-example-0.1.0.0.drv' failed with exit code 1
-error: build of '/nix/store/vnk47qavrbwiccyi6g9ici7qdw1wdxzm-text-icu-static-example-0.1.0.0.drv' failed
+builder for '/nix/store/qq5s3x9045ck7xr4l01s58n47yp8qhjn-text-icu-static-example-0.1.0.0.drv' failed with exit code 1
+error: build of '/nix/store/qq5s3x9045ck7xr4l01s58n47yp8qhjn-text-icu-static-example-0.1.0.0.drv' failed

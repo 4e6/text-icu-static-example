@@ -1,6 +1,6 @@
 # text-icu-static-example
 
-An attempt of building static executable with [icu][icu].
+An attempt to build a static executable with [icu][icu].
 
 ## C example
 
@@ -8,13 +8,13 @@ Directory `test` contains example C program that reads a string from stdin,
 converts it to UTF-16 ICU representation and prints to stdout.
 
 [How to use ICU][how-to-use-icu] manual page suggests to use `pkg-config` for
-configuration options. The command should look like:
+configuration options. The command should look like this:
 
 ``` bash
 gcc -static -pthread test.c -o test $(pkg-config --static --cflags --libs icu-io)
 ```
 
-But it fails with multiple errors about the undefined references:
+But it fails with multiple errors about undefined references:
 
 ```
 /nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(putil.ao): In function `uprv
@@ -29,8 +29,7 @@ undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
 ```
 
 The problem is with the ICU pkg-config configuration. It lacks the `-lstdc++`
-c++ runtime library, as it was found on the
-[buildroot mailing list][buildroot-mailing-list]:
+c++ runtime library, as it was found on the [mailing list][buildroot-mailing-list]:
 
  ``` bash
 $ pkg-config --static --cflags --libs icu-io
@@ -39,7 +38,7 @@ $ pkg-config --static --cflags --libs icu-io
 
 To successfully build the static executable we will use the `nix-shell` which
 puts static glibc and icu libraries on the linker path (otherwise we'll be
-required to put them manually with the `-L` option):
+required to put them manually with the `-L` options):
 
 ``` bash
 $ nix-shell test.nix --command 'gcc -static -pthread test.c -o test $(pkg-config
@@ -55,7 +54,9 @@ $ ldd test
 	not a dynamic executable
 ```
 
-There is also CMake build that can be invoked with:
+By adding `-lstdc++`, gcc produced a static `test` executable.
+
+There is also CMake build that works with nix:
 
 ``` bash
 $ nix-bulid test.nix
@@ -141,8 +142,9 @@ error: build of '/nix/store/9vgc3m7jd3wssyfnacgrxddw70rpdy77-text-icu-static-exa
 ```
 
 !! Note that directory `/tmp/nix-build-text-icu-static-example-0.1.0.0.drv-0`
-contains package-db with `text-icu` built against a static `icu`
-library. Ordinary package-db from i.e. `$HOME/.cabal` won't work in this case.
+contains package-db with `text-icu` built against an `icu` library from
+Nixpkgs. The package-db from i.e. `$HOME/.cabal` won't work in this case,
+because versions will differ.
 
 ``` bash
 ghc
@@ -175,7 +177,7 @@ log file, and pass them with the extra lib dirs to the command above.
 I was able to build a static `a.out` executable with the following command:
 
 ``` bash
-$ /nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/bin/ghc -optl=-pthread -optl=-static -L/nix/store/m9qzh7zv0pvkarprpda5zy68myq43iqs-glibc-2.26-131-static/lib -L/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib -L/nix/store/p5b8ashcchqzwlv1vcbzq98cqmfmvfky-gmp-6.1.2/lib -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/text-1.2.3.0 Normalize.o /nix/store/jvw92vblnrsqhfm3ik5lj47jq1yp625q-text-icu-0.7.0.1/lib/ghc-8.4.3/text-icu-0.7.0.1/libHStext-icu-0.7.0.1-GQ0DM6OBTErByT1EmU06SY.a  -licuio -licui18n -licuuc -licudata -lpthread -ldl -lm -lstdc++ -lHStext-1.2.3.0
+$ /nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/bin/ghc -optl=-pthread -optl=-static -L/nix/store/m9qzh7zv0pvkarprpda5zy68myq43iqs-glibc-2.26-131-static/lib -L/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib -L/nix/store/p5b8ashcchqzwlv1vcbzq98cqmfmvfky-gmp-6.1.2/lib -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/text-1.2.3.0 Normalize.o /nix/store/x24salkq0vdy15kbd58ymlvxsw2rdgj8-text-icu-0.7.0.1/lib/ghc-8.4.3/text-icu-0.7.0.1/libHStext-icu-0.7.0.1-GQ0DM6OBTErByT1EmU06SY.a  -licuio -licui18n -licuuc -licudata -lpthread -ldl -lm -lstdc++ -lHStext-1.2.3.0
 /nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(putil.ao): In function `uprv_dl_open_59':
 (.text+0x1c52): warning: Using 'dlopen' in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
 $ ldd a.out
@@ -193,39 +195,40 @@ configure options. File
 
 
 > Linking dist/build/text-icu-normalize/text-icu-normalize ...
-> Created temporary directory: /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc23253_0
+> Created temporary directory: /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc28639_0
 
 > *** C Compiler:
-> /nix/store/9y2f87qb1djmpjs1gxl6smfkpl581waa-gcc-wrapper-7.3.0/bin/cc -fno-stack-protector -DTABLES_NEXT_TO_CODE -c /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc23253_0/ghc_1.c -o /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc23253_0/ghc_2.o -no-pie -I/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/include
+> /nix/store/9y2f87qb1djmpjs1gxl6smfkpl581waa-gcc-wrapper-7.3.0/bin/cc -fno-stack-protector -DTABLES_NEXT_TO_CODE -c /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc28639_0/ghc_1.c -o /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc28639_0/ghc_2.o -no-pie -I/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/include
 
 > *** C Compiler:
-> /nix/store/9y2f87qb1djmpjs1gxl6smfkpl581waa-gcc-wrapper-7.3.0/bin/cc -fno-stack-protector -DTABLES_NEXT_TO_CODE -c /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc23253_0/ghc_4.s -o /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc23253_0/ghc_5.o
+> /nix/store/9y2f87qb1djmpjs1gxl6smfkpl581waa-gcc-wrapper-7.3.0/bin/cc -fno-stack-protector -DTABLES_NEXT_TO_CODE -c /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc28639_0/ghc_4.s -o /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc28639_0/ghc_5.o
 
 > *** Linker:
-> /nix/store/9y2f87qb1djmpjs1gxl6smfkpl581waa-gcc-wrapper-7.3.0/bin/cc -fno-stack-protector -DTABLES_NEXT_TO_CODE '-Wl,--hash-size=31' -Wl,--reduce-memory-overheads -Wl,--no-as-needed -static -pthread -L/nix/store/m9qzh7zv0pvkarprpda5zy68myq43iqs-glibc-2.26-131-static/lib -L/nix/store/p5b8ashcchqzwlv1vcbzq98cqmfmvfky-gmp-6.1.2/lib -L/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib -licui18n -licuio -licuuc -licudata -ldl -lm '-lstdc++' -o dist/build/text-icu-normalize/text-icu-normalize -lm -no-pie -Wl,--gc-sections dist/build/text-icu-normalize/text-icu-normalize-tmp/Main.o -L/nix/store/54cwjh1lsmjpk2cbs43gw89w4zhk3ybb-ncurses-6.0-20171125/lib -L/nix/store/wc2ll61lypsv9yig6mvy73c0lw1dp15a-gmp-6.1.2/lib -L/nix/store/7gwymbizl8319i0mcn2k7kdhpgj4vpnk-text-icu-0.7.0.1/lib/ghc-8.4.3/text-icu-0.7.0.1 -L/nix/store/54cwjh1lsmjpk2cbs43gw89w4zhk3ybb-ncurses-6.0-20171125/lib -L/nix/store/wc2ll61lypsv9yig6mvy73c0lw1dp15a-gmp-6.1.2/lib -L/nix/store/0al5181s03bylmsvrwj2lnvvlsqvdbcl-icu4c-59.1-dev/lib -L/nix/store/zvm4zywflp9x8q2zrs2506c8jcjp6xvr-icu4c-59.1/lib -L/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/text-1.2.3.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/binary-0.8.5.1 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/containers-0.5.11.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/bytestring-0.10.8.2 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/deepseq-1.4.3.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/array-0.5.2.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/base-4.11.1.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/integer-gmp-1.0.2.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/ghc-prim-0.5.2.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/rts /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc23253_0/ghc_2.o /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc23253_0/ghc_5.o -Wl,-u,base_GHCziTopHandler_runIO_closure -Wl,-u,base_GHCziTopHandler_runNonIO_closure -Wl,-u,ghczmprim_GHCziTuple_Z0T_closure -Wl,-u,ghczmprim_GHCziTypes_True_closure -Wl,-u,ghczmprim_GHCziTypes_False_closure -Wl,-u,base_GHCziPack_unpackCString_closure -Wl,-u,base_GHCziWeak_runFinalizzerBatch_closure -Wl,-u,base_GHCziIOziException_stackOverflow_closure -Wl,-u,base_GHCziIOziException_heapOverflow_closure -Wl,-u,base_GHCziIOziException_allocationLimitExceeded_closure -Wl,-u,base_GHCziIOziException_blockedIndefinitelyOnMVar_closure -Wl,-u,base_GHCziIOziException_blockedIndefinitelyOnSTM_closure -Wl,-u,base_GHCziIOziException_cannotCompactFunction_closure -Wl,-u,base_GHCziIOziException_cannotCompactPinned_closure -Wl,-u,base_GHCziIOziException_cannotCompactMutable_closure -Wl,-u,base_ControlziExceptionziBase_absentSumFieldError_closure -Wl,-u,base_ControlziExceptionziBase_nonTermination_closure -Wl,-u,base_ControlziExceptionziBase_nestedAtomically_closure -Wl,-u,base_GHCziEventziThread_blockedOnBadFD_closure -Wl,-u,base_GHCziConcziSync_runSparks_closure -Wl,-u,base_GHCziConcziIO_ensureIOManagerIsRunning_closure -Wl,-u,base_GHCziConcziIO_ioManagerCapabilitiesChanged_closure -Wl,-u,base_GHCziConcziSignal_runHandlersPtr_closure -Wl,-u,base_GHCziTopHandler_flushStdHandles_closure -Wl,-u,base_GHCziTopHandler_runMainIO_closure -Wl,-u,ghczmprim_GHCziTypes_Czh_con_info -Wl,-u,ghczmprim_GHCziTypes_Izh_con_info -Wl,-u,ghczmprim_GHCziTypes_Fzh_con_info -Wl,-u,ghczmprim_GHCziTypes_Dzh_con_info -Wl,-u,ghczmprim_GHCziTypes_Wzh_con_info -Wl,-u,base_GHCziPtr_Ptr_con_info -Wl,-u,base_GHCziPtr_FunPtr_con_info -Wl,-u,base_GHCziInt_I8zh_con_info -Wl,-u,base_GHCziInt_I16zh_con_info -Wl,-u,base_GHCziInt_I32zh_con_info -Wl,-u,base_GHCziInt_I64zh_con_info -Wl,-u,base_GHCziWord_W8zh_con_info -Wl,-u,base_GHCziWord_W16zh_con_info -Wl,-u,base_GHCziWord_W32zh_con_info -Wl,-u,base_GHCziWord_W64zh_con_info -Wl,-u,base_GHCziStable_StablePtr_con_info -Wl,-u,hs_atomic_add8 -Wl,-u,hs_atomic_add16 -Wl,-u,hs_atomic_add32 -Wl,-u,hs_atomic_add64 -Wl,-u,hs_atomic_sub8 -Wl,-u,hs_atomic_sub16 -Wl,-u,hs_atomic_sub32 -Wl,-u,hs_atomic_sub64 -Wl,-u,hs_atomic_and8 -Wl,-u,hs_atomic_and16 -Wl,-u,hs_atomic_and32 -Wl,-u,hs_atomic_and64 -Wl,-u,hs_atomic_nand8 -Wl,-u,hs_atomic_nand16 -Wl,-u,hs_atomic_nand32 -Wl,-u,hs_atomic_nand64 -Wl,-u,hs_atomic_or8 -Wl,-u,hs_atomic_or16 -Wl,-u,hs_atomic_or32 -Wl,-u,hs_atomic_or64 -Wl,-u,hs_atomic_xor8 -Wl,-u,hs_atomic_xor16 -Wl,-u,hs_atomic_xor32 -Wl,-u,hs_atomic_xor64 -Wl,-u,hs_cmpxchg8 -Wl,-u,hs_cmpxchg16 -Wl,-u,hs_cmpxchg32 -Wl,-u,hs_cmpxchg64 -Wl,-u,hs_atomicread8 -Wl,-u,hs_atomicread16 -Wl,-u,hs_atomicread32 -Wl,-u,hs_atomicread64 -Wl,-u,hs_atomicwrite8 -Wl,-u,hs_atomicwrite16 -Wl,-u,hs_atomicwrite32 -Wl,-u,hs_atomicwrite64 -lHStext-icu-0.7.0.1-GQ0DM6OBTErByT1EmU06SY -lHStext-1.2.3.0 -lHSbinary-0.8.5.1 -lHScontainers-0.5.11.0 -lHSbytestring-0.10.8.2 -lHSdeepseq-1.4.3.0 -lHSarray-0.5.2.0 -lHSbase-4.11.1.0 -lHSinteger-gmp-1.0.2.0 -lHSghc-prim-0.5.2.0 -lHSrts -lCffi -licuuc -licui18n -licudata -lgmp -lm -lrt -ldl
+> /nix/store/9y2f87qb1djmpjs1gxl6smfkpl581waa-gcc-wrapper-7.3.0/bin/cc -fno-stack-protector -DTABLES_NEXT_TO_CODE '-Wl,--hash-size=31' -Wl,--reduce-memory-overheads -Wl,--no-as-needed -static -pthread -L/nix/store/m9qzh7zv0pvkarprpda5zy68myq43iqs-glibc-2.26-131-static/lib -L/nix/store/p5b8ashcchqzwlv1vcbzq98cqmfmvfky-gmp-6.1.2/lib -L/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib -licui18n -licuio -licuuc -licudata -ldl -lm '-lstdc++' -o dist/build/text-icu-normalize/text-icu-normalize -lm -no-pie -Wl,--gc-sections dist/build/text-icu-normalize/text-icu-normalize-tmp/Main.o -L/nix/store/54cwjh1lsmjpk2cbs43gw89w4zhk3ybb-ncurses-6.0-20171125/lib -L/nix/store/wc2ll61lypsv9yig6mvy73c0lw1dp15a-gmp-6.1.2/lib -L/nix/store/x24salkq0vdy15kbd58ymlvxsw2rdgj8-text-icu-0.7.0.1/lib/ghc-8.4.3/text-icu-0.7.0.1 -L/nix/store/54cwjh1lsmjpk2cbs43gw89w4zhk3ybb-ncurses-6.0-20171125/lib -L/nix/store/wc2ll61lypsv9yig6mvy73c0lw1dp15a-gmp-6.1.2/lib -L/nix/store/3andck6v2a9yzi133fpr8qq54b5p5i5s-icu4c-59.1-dev/lib -L/nix/store/bw0x50p0vrb1zzb0lshhsfj2v09sjhfq-icu4c-59.1/lib -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/text-1.2.3.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/binary-0.8.5.1 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/containers-0.5.11.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/bytestring-0.10.8.2 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/deepseq-1.4.3.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/array-0.5.2.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/base-4.11.1.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/integer-gmp-1.0.2.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/ghc-prim-0.5.2.0 -L/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/rts /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc28639_0/ghc_2.o /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/ghc28639_0/ghc_5.o -Wl,-u,base_GHCziTopHandler_runIO_closure -Wl,-u,base_GHCziTopHandler_runNonIO_closure -Wl,-u,ghczmprim_GHCziTuple_Z0T_closure -Wl,-u,ghczmprim_GHCziTypes_True_closure -Wl,-u,ghczmprim_GHCziTypes_False_closure -Wl,-u,base_GHCziPack_unpackCString_closure -Wl,-u,base_GHCziWeak_runFinalizzerBatch_closure -Wl,-u,base_GHCziIOziException_stackOverflow_closure -Wl,-u,base_GHCziIOziException_heapOverflow_closure -Wl,-u,base_GHCziIOziException_allocationLimitExceeded_closure -Wl,-u,base_GHCziIOziException_blockedIndefinitelyOnMVar_closure -Wl,-u,base_GHCziIOziException_blockedIndefinitelyOnSTM_closure -Wl,-u,base_GHCziIOziException_cannotCompactFunction_closure -Wl,-u,base_GHCziIOziException_cannotCompactPinned_closure -Wl,-u,base_GHCziIOziException_cannotCompactMutable_closure -Wl,-u,base_ControlziExceptionziBase_absentSumFieldError_closure -Wl,-u,base_ControlziExceptionziBase_nonTermination_closure -Wl,-u,base_ControlziExceptionziBase_nestedAtomically_closure -Wl,-u,base_GHCziEventziThread_blockedOnBadFD_closure -Wl,-u,base_GHCziConcziSync_runSparks_closure -Wl,-u,base_GHCziConcziIO_ensureIOManagerIsRunning_closure -Wl,-u,base_GHCziConcziIO_ioManagerCapabilitiesChanged_closure -Wl,-u,base_GHCziConcziSignal_runHandlersPtr_closure -Wl,-u,base_GHCziTopHandler_flushStdHandles_closure -Wl,-u,base_GHCziTopHandler_runMainIO_closure -Wl,-u,ghczmprim_GHCziTypes_Czh_con_info -Wl,-u,ghczmprim_GHCziTypes_Izh_con_info -Wl,-u,ghczmprim_GHCziTypes_Fzh_con_info -Wl,-u,ghczmprim_GHCziTypes_Dzh_con_info -Wl,-u,ghczmprim_GHCziTypes_Wzh_con_info -Wl,-u,base_GHCziPtr_Ptr_con_info -Wl,-u,base_GHCziPtr_FunPtr_con_info -Wl,-u,base_GHCziInt_I8zh_con_info -Wl,-u,base_GHCziInt_I16zh_con_info -Wl,-u,base_GHCziInt_I32zh_con_info -Wl,-u,base_GHCziInt_I64zh_con_info -Wl,-u,base_GHCziWord_W8zh_con_info -Wl,-u,base_GHCziWord_W16zh_con_info -Wl,-u,base_GHCziWord_W32zh_con_info -Wl,-u,base_GHCziWord_W64zh_con_info -Wl,-u,base_GHCziStable_StablePtr_con_info -Wl,-u,hs_atomic_add8 -Wl,-u,hs_atomic_add16 -Wl,-u,hs_atomic_add32 -Wl,-u,hs_atomic_add64 -Wl,-u,hs_atomic_sub8 -Wl,-u,hs_atomic_sub16 -Wl,-u,hs_atomic_sub32 -Wl,-u,hs_atomic_sub64 -Wl,-u,hs_atomic_and8 -Wl,-u,hs_atomic_and16 -Wl,-u,hs_atomic_and32 -Wl,-u,hs_atomic_and64 -Wl,-u,hs_atomic_nand8 -Wl,-u,hs_atomic_nand16 -Wl,-u,hs_atomic_nand32 -Wl,-u,hs_atomic_nand64 -Wl,-u,hs_atomic_or8 -Wl,-u,hs_atomic_or16 -Wl,-u,hs_atomic_or32 -Wl,-u,hs_atomic_or64 -Wl,-u,hs_atomic_xor8 -Wl,-u,hs_atomic_xor16 -Wl,-u,hs_atomic_xor32 -Wl,-u,hs_atomic_xor64 -Wl,-u,hs_cmpxchg8 -Wl,-u,hs_cmpxchg16 -Wl,-u,hs_cmpxchg32 -Wl,-u,hs_cmpxchg64 -Wl,-u,hs_atomicread8 -Wl,-u,hs_atomicread16 -Wl,-u,hs_atomicread32 -Wl,-u,hs_atomicread64 -Wl,-u,hs_atomicwrite8 -Wl,-u,hs_atomicwrite16 -Wl,-u,hs_atomicwrite32 -Wl,-u,hs_atomicwrite64 -lHStext-icu-0.7.0.1-GQ0DM6OBTErByT1EmU06SY -lHStext-1.2.3.0 -lHSbinary-0.8.5.1 -lHScontainers-0.5.11.0 -lHSbytestring-0.10.8.2 -lHSdeepseq-1.4.3.0 -lHSarray-0.5.2.0 -lHSbase-4.11.1.0 -lHSinteger-gmp-1.0.2.0 -lHSghc-prim-0.5.2.0 -lHSrts -lCffi -licuuc -licui18n -licudata -lgmp -lm -lrt -ldl
 
 
-The linking is performed in several steps in the temporary directory which gets
-deleted after the failure, so I was not able to reproduce these steps
-locally.
+Cabal performs linking in several steps in the temporary directory which gets
+deleted afterall, so I was not able to reproduce these steps locally.
 
 At least we can see that all the flags including `-lstdc++` are passed to
 linker and it should succeed.
 
-### Issue with order of arguments
+### Issue with the order of arguments
 
 Then I recalled that `gcc` might be sensitive to the order of arguments. I
-started to play around the command from the previsous section that links the
-static executable:
+started to play around the command from the previous section that links the
+static executable and discovered that `-lstdc++` should be passed **after** the
+`icu` libraries.
+
+For example, the (simplified) command that works:
 
 ``` bash
 ghc -optl=-static -optl=-pthread Normalize.o -licuio -licui18n -licuuc -licudata
 -lpthread -ldl -lm -lstdc++ -lHStext-1.2.3.0 -lHStext-icu-0.7.0.1
 ```
 
-and discovered that `-lstdc++` should be passed **after** the `icu`
-libraries. For example, the command below with the same libraries but in
-slightly different order, brings the same error about undefined references:
+But the command with the same libraries, but in slightly different order brings
+the error about undefined references:
 
 ``` bash
 ghc -optl=-static -optl=-pthread Normalize.o -lstdc++ -licuio -licui18n -licuuc

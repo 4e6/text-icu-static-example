@@ -25,7 +25,7 @@ let
         enableSharedLibraries = false;
         enableSharedExecutables = false;
         configureFlags = [
-          #"--ghc-option=-v"
+          "--ghc-option=-v"
           "--ghc-option=-optl=-static"
           "--ghc-option=-optl=-pthread"
           "--ghc-option=-optl=-L${pkgs.glibc.static}/lib"
@@ -50,27 +50,9 @@ let
                        then pkgs.haskellPackages
                        else pkgs.haskell.packages.${compiler};
 
-  haskellPackagesOverride = haskellPackages.override {
-    overrides = self: super: {
-      text-icu = pkgs.haskell.lib.overrideCabal super.text-icu (args: {
-        isLibrary = true;
-        isExecutable = false;
-        enableSharedLibraries = false;
-        enableSharedExecutables = false;
-        configureFlags = (args.configureFlags or []) ++ [
-          "--ghc-option=-optl=-static"
-          "--ghc-option=-optl=-pthread"
-          "--ghc-option=-optl=-L${pkgs.glibc.static}/lib"
-          "--ghc-option=-optl=-L${pkgs.gmp6.override { withStatic = true; }}/lib"
-        ];
-        librarySystemDepends = [ icu-static.dev icu-static.static ];
-      });
-    };
-  };
-
   variant = if doBenchmark then pkgs.haskell.lib.doBenchmark else pkgs.lib.id;
 
-  drv = variant (haskellPackagesOverride.callPackage f {});
+  drv = variant (haskellPackages.callPackage f {});
 
 in
 
