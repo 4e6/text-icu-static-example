@@ -1,13 +1,14 @@
 #include <stdlib.h>
 #include <string.h>
-#include "unicode/ustring.h"
 #include "unicode/ustdio.h"
+#include "unicode/ustring.h"
 
 #define BUFFERSIZE 128
 
 int main()
 {
     char buffer[BUFFERSIZE];
+
     printf("Enter a message: ");
     fgets(buffer, BUFFERSIZE, stdin);
 
