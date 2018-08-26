@@ -1,57 +1,58 @@
 these derivations will be built:
-  /nix/store/qml8h45rza8szh4s5fjdh1vzr6dy1xhh-text-icu-static-example-0.1.0.0.drv
-building '/nix/store/qml8h45rza8szh4s5fjdh1vzr6dy1xhh-text-icu-static-example-0.1.0.0.drv'...
+  /nix/store/vnk47qavrbwiccyi6g9ici7qdw1wdxzm-text-icu-static-example-0.1.0.0.drv
+building '/nix/store/vnk47qavrbwiccyi6g9ici7qdw1wdxzm-text-icu-static-example-0.1.0.0.drv'...
 setupCompilerEnvironmentPhase
-Build with /nix/store/zncdaxamqaf5l9pz1aw23a7wmcj93crx-ghc-8.2.2.
+Build with /nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3.
 ignoring (possibly broken) abi-depends field for packages
 unpacking sources
-unpacking source archive /nix/store/793qhfa58nlgzc3f9dhi8rn3cnnmszlv-text-icu-static-example
+unpacking source archive /nix/store/n5kshpy9jxvg5j4dh5w83srgw4hv1gn4-text-icu-static-example
 source root is text-icu-static-example
 patching sources
 compileBuildDriverPhase
-setupCompileFlags: -package-db=/tmp/nix-build-text-icu-static-example-0.1.0.0.drv-0/package.conf.d -j4 -threaded
-[1 of 1] Compiling Main             ( Setup.hs, /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-0/Main.o )
+setupCompileFlags: -package-db=/tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/package.conf.d -j4 -threaded
+[1 of 1] Compiling Main             ( Setup.hs, /tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/Main.o )
 Linking Setup ...
 configuring
-configureFlags: --verbose --prefix=/nix/store/8af2pmpjc296aq79kz26ahw938f6sy3n-text-icu-static-example-0.1.0.0 --libdir=$prefix/lib/$compiler --libsubdir=$pkgid --docdir=/nix/store/xa84qbqndnrpqzl89ff98m2iyxi5f831-text-icu-static-example-0.1.0.0-doc/share/doc --with-gcc=gcc --package-db=/tmp/nix-build-text-icu-static-example-0.1.0.0.drv-0/package.conf.d --ghc-option=-j4 --disable-split-objs --disable-library-profiling --disable-profiling --disable-shared --disable-coverage --enable-library-vanilla --disable-executable-dynamic --enable-tests --ghc-option=-split-sections --ghc-option=-optl=-static --ghc-option=-optl=-pthread --ghc-option=-optl=-L/nix/store/m9qzh7zv0pvkarprpda5zy68myq43iqs-glibc-2.26-131-static/lib --ghc-option=-optl=-L/nix/store/p5b8ashcchqzwlv1vcbzq98cqmfmvfky-gmp-6.1.2/lib --ghc-option=-optl=-L/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib --extra-lib-dirs=/nix/store/54cwjh1lsmjpk2cbs43gw89w4zhk3ybb-ncurses-6.0-20171125/lib --extra-lib-dirs=/nix/store/wc2ll61lypsv9yig6mvy73c0lw1dp15a-gmp-6.1.2/lib --extra-lib-dirs=/nix/store/54cwjh1lsmjpk2cbs43gw89w4zhk3ybb-ncurses-6.0-20171125/lib
+configureFlags: --verbose --prefix=/nix/store/fs99n80kqblclvyhlpbmh8iz438ybcin-text-icu-static-example-0.1.0.0 --libdir=$prefix/lib/$compiler --libsubdir=$pkgid --docdir=/nix/store/kyzcaxv20rmls0zssq5axjs3sp3xlw3k-text-icu-static-example-0.1.0.0-doc/share/doc --with-gcc=gcc --package-db=/tmp/nix-build-text-icu-static-example-0.1.0.0.drv-1/package.conf.d --ghc-option=-j4 --disable-split-objs --disable-library-profiling --disable-profiling --disable-shared --disable-coverage --enable-library-vanilla --disable-executable-dynamic --enable-tests --ghc-option=-split-sections --ghc-option=-optl=-static --ghc-option=-optl=-pthread --ghc-option=-optl=-L/nix/store/m9qzh7zv0pvkarprpda5zy68myq43iqs-glibc-2.26-131-static/lib --ghc-option=-optl=-L/nix/store/p5b8ashcchqzwlv1vcbzq98cqmfmvfky-gmp-6.1.2/lib --ghc-option=-optl=-L/nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib --ghc-option=-optl=-licui18n --ghc-option=-optl=-licuio --ghc-option=-optl=-licuuc --ghc-option=-optl=-licudata --ghc-option=-optl=-ldl --ghc-option=-optl=-lm --ghc-option=-optl=-lstdc++ --extra-lib-dirs=/nix/store/54cwjh1lsmjpk2cbs43gw89w4zhk3ybb-ncurses-6.0-20171125/lib --extra-lib-dirs=/nix/store/wc2ll61lypsv9yig6mvy73c0lw1dp15a-gmp-6.1.2/lib --extra-lib-dirs=/nix/store/54cwjh1lsmjpk2cbs43gw89w4zhk3ybb-ncurses-6.0-20171125/lib
+Using Parsec parser
 Configuring text-icu-static-example-0.1.0.0...
-Dependency base >=4.10 && <5: using base-4.10.1.0
-Dependency text >1.2 && <2: using text-1.2.2.2
+Dependency base >=4.10 && <5: using base-4.11.1.0
+Dependency text >1.2 && <2: using text-1.2.3.0
 Dependency text-icu >0.7 && <1: using text-icu-0.7.0.1
 Source component graph: component exe:text-icu-normalize
 Configured component graph:
-    component text-icu-static-example-0.1.0.0-3HYRRiyqqwh2k5vzQLeMlx-text-icu-normalize
-        include base-4.10.1.0
-        include text-1.2.2.2-J0kTo5xltQjAfCz3JZ4Oj0
-        include text-icu-0.7.0.1-Inwdr1MlbEQ52R1EfsfH74
+    component text-icu-static-example-0.1.0.0-ClrtcFp6xcr4KgxfaeH7PX-text-icu-normalize
+        include base-4.11.1.0
+        include text-1.2.3.0
+        include text-icu-0.7.0.1-GQ0DM6OBTErByT1EmU06SY
 Linked component graph:
-    unit text-icu-static-example-0.1.0.0-3HYRRiyqqwh2k5vzQLeMlx-text-icu-normalize
-        include base-4.10.1.0
-        include text-1.2.2.2-J0kTo5xltQjAfCz3JZ4Oj0
-        include text-icu-0.7.0.1-Inwdr1MlbEQ52R1EfsfH74
+    unit text-icu-static-example-0.1.0.0-ClrtcFp6xcr4KgxfaeH7PX-text-icu-normalize
+        include base-4.11.1.0
+        include text-1.2.3.0
+        include text-icu-0.7.0.1-GQ0DM6OBTErByT1EmU06SY
 Ready component graph:
-    definite text-icu-static-example-0.1.0.0-3HYRRiyqqwh2k5vzQLeMlx-text-icu-normalize
-        depends base-4.10.1.0
-        depends text-1.2.2.2-J0kTo5xltQjAfCz3JZ4Oj0
-        depends text-icu-0.7.0.1-Inwdr1MlbEQ52R1EfsfH74
-Using Cabal-2.0.1.0 compiled by ghc-8.2
-Using compiler: ghc-8.2.2
+    definite text-icu-static-example-0.1.0.0-ClrtcFp6xcr4KgxfaeH7PX-text-icu-normalize
+        depends base-4.11.1.0
+        depends text-1.2.3.0
+        depends text-icu-0.7.0.1-GQ0DM6OBTErByT1EmU06SY
+Using Cabal-2.2.0.1 compiled by ghc-8.4
+Using compiler: ghc-8.4.3
 Using install prefix:
-/nix/store/8af2pmpjc296aq79kz26ahw938f6sy3n-text-icu-static-example-0.1.0.0
+/nix/store/fs99n80kqblclvyhlpbmh8iz438ybcin-text-icu-static-example-0.1.0.0
 Executables installed in:
-/nix/store/8af2pmpjc296aq79kz26ahw938f6sy3n-text-icu-static-example-0.1.0.0/bin
+/nix/store/fs99n80kqblclvyhlpbmh8iz438ybcin-text-icu-static-example-0.1.0.0/bin
 Libraries installed in:
-/nix/store/8af2pmpjc296aq79kz26ahw938f6sy3n-text-icu-static-example-0.1.0.0/lib/ghc-8.2.2/text-icu-static-example-0.1.0.0
+/nix/store/fs99n80kqblclvyhlpbmh8iz438ybcin-text-icu-static-example-0.1.0.0/lib/ghc-8.4.3/text-icu-static-example-0.1.0.0
 Dynamic Libraries installed in:
-/nix/store/8af2pmpjc296aq79kz26ahw938f6sy3n-text-icu-static-example-0.1.0.0/lib/ghc-8.2.2/x86_64-linux-ghc-8.2.2
+/nix/store/fs99n80kqblclvyhlpbmh8iz438ybcin-text-icu-static-example-0.1.0.0/lib/ghc-8.4.3/x86_64-linux-ghc-8.4.3
 Private executables installed in:
-/nix/store/8af2pmpjc296aq79kz26ahw938f6sy3n-text-icu-static-example-0.1.0.0/libexec/x86_64-linux-ghc-8.2.2/text-icu-static-example-0.1.0.0
+/nix/store/fs99n80kqblclvyhlpbmh8iz438ybcin-text-icu-static-example-0.1.0.0/libexec/x86_64-linux-ghc-8.4.3/text-icu-static-example-0.1.0.0
 Data files installed in:
-/nix/store/8af2pmpjc296aq79kz26ahw938f6sy3n-text-icu-static-example-0.1.0.0/share/x86_64-linux-ghc-8.2.2/text-icu-static-example-0.1.0.0
+/nix/store/fs99n80kqblclvyhlpbmh8iz438ybcin-text-icu-static-example-0.1.0.0/share/x86_64-linux-ghc-8.4.3/text-icu-static-example-0.1.0.0
 Documentation installed in:
-/nix/store/xa84qbqndnrpqzl89ff98m2iyxi5f831-text-icu-static-example-0.1.0.0-doc/share/doc
+/nix/store/kyzcaxv20rmls0zssq5axjs3sp3xlw3k-text-icu-static-example-0.1.0.0-doc/share/doc
 Configuration files installed in:
-/nix/store/8af2pmpjc296aq79kz26ahw938f6sy3n-text-icu-static-example-0.1.0.0/etc
+/nix/store/fs99n80kqblclvyhlpbmh8iz438ybcin-text-icu-static-example-0.1.0.0/etc
 No alex found
 Using ar found on system at:
 /nix/store/k8b9hqv58dd1z0j4ikak24ykndcm91s6-binutils-2.28.1/bin/ar
@@ -60,23 +61,23 @@ No cpphs found
 No doctest found
 Using gcc version 7.3.0 given by user at:
 /nix/store/9y2f87qb1djmpjs1gxl6smfkpl581waa-gcc-wrapper-7.3.0/bin/gcc
-Using ghc version 8.2.2 found on system at:
-/nix/store/zncdaxamqaf5l9pz1aw23a7wmcj93crx-ghc-8.2.2/bin/ghc
-Using ghc-pkg version 8.2.2 found on system at:
-/nix/store/zncdaxamqaf5l9pz1aw23a7wmcj93crx-ghc-8.2.2/bin/ghc-pkg
+Using ghc version 8.4.3 found on system at:
+/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/bin/ghc
+Using ghc-pkg version 8.4.3 found on system at:
+/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/bin/ghc-pkg
 No ghcjs found
 No ghcjs-pkg found
 No greencard found
-Using haddock version 2.18.1 found on system at:
-/nix/store/zncdaxamqaf5l9pz1aw23a7wmcj93crx-ghc-8.2.2/bin/haddock
+Using haddock version 2.20.0 found on system at:
+/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/bin/haddock
 No happy found
 Using haskell-suite found on system at: haskell-suite-dummy-location
 Using haskell-suite-pkg found on system at: haskell-suite-pkg-dummy-location
 No hmake found
 Using hpc version 0.67 found on system at:
-/nix/store/zncdaxamqaf5l9pz1aw23a7wmcj93crx-ghc-8.2.2/bin/hpc
-Using hsc2hs version 0.68.2 found on system at:
-/nix/store/zncdaxamqaf5l9pz1aw23a7wmcj93crx-ghc-8.2.2/bin/hsc2hs
+/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/bin/hpc
+Using hsc2hs version 0.68.3 found on system at:
+/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/bin/hsc2hs
 No hscolour found
 No jhc found
 Using ld found on system at:
@@ -84,8 +85,8 @@ Using ld found on system at:
 No lhc found
 No lhc-pkg found
 No pkg-config found
-Using runghc version 8.2.2 found on system at:
-/nix/store/zncdaxamqaf5l9pz1aw23a7wmcj93crx-ghc-8.2.2/bin/runghc
+Using runghc version 8.4.3 found on system at:
+/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/bin/runghc
 Using strip version 2.28 found on system at:
 /nix/store/k8b9hqv58dd1z0j4ikak24ykndcm91s6-binutils-2.28.1/bin/strip
 Using tar found on system at:
@@ -96,7 +97,7 @@ Preprocessing executable 'text-icu-normalize' for text-icu-static-example-0.1.0.
 Building executable 'text-icu-normalize' for text-icu-static-example-0.1.0.0..
 [1 of 1] Compiling Main             ( Normalize.hs, dist/build/text-icu-normalize/text-icu-normalize-tmp/Main.o )
 Linking dist/build/text-icu-normalize/text-icu-normalize ...
-/nix/store/zncdaxamqaf5l9pz1aw23a7wmcj93crx-ghc-8.2.2/lib/ghc-8.2.2/rts/libHSrts.a(Linker.o): In function `internal_dlopen':
+/nix/store/dpd9k7q08wvb6d1a67h66amcazv5sy39-ghc-8.4.3/lib/ghc-8.4.3/rts/libHSrts.a(Linker.o): In function `internal_dlopen':
 Linker.c:(.text.internal_dlopen+0x7): warning: Using 'dlopen' in statically linked applications requires at runtime the shared libraries from the glibc version used for linking
 /nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicuuc.a(uniset_props.ao): In function `icu_59::UnicodeSet::applyPattern(icu_59::RuleCharacterIterator&, icu_59::SymbolTable const*, icu_59::UnicodeString&, unsigned int, icu_59::UnicodeSet& (icu_59::UnicodeSet::*)(int), UErrorCode&)':
 (.text+0x1792): undefined reference to `__dynamic_cast'
@@ -731,5 +732,5 @@ Linker.c:(.text.internal_dlopen+0x7): warning: Using 'dlopen' in statically link
 /nix/store/2h1il2pyfh20kc5rh7vnp5a564alxr21-icu4c-59.1-static/lib/libicui18n.a(regexcmp.ao):(.data.rel.ro._ZTIN6icu_5912RegexCompileE[_ZTIN6icu_5912RegexCompileE]+0x0): undefined reference to `vtable for __cxxabiv1::__si_class_type_info'
 collect2: error: ld returned 1 exit status
 `cc' failed in phase `Linker'. (Exit code: 1)
-builder for '/nix/store/qml8h45rza8szh4s5fjdh1vzr6dy1xhh-text-icu-static-example-0.1.0.0.drv' failed with exit code 1
-error: build of '/nix/store/qml8h45rza8szh4s5fjdh1vzr6dy1xhh-text-icu-static-example-0.1.0.0.drv' failed
+builder for '/nix/store/vnk47qavrbwiccyi6g9ici7qdw1wdxzm-text-icu-static-example-0.1.0.0.drv' failed with exit code 1
+error: build of '/nix/store/vnk47qavrbwiccyi6g9ici7qdw1wdxzm-text-icu-static-example-0.1.0.0.drv' failed

@@ -25,7 +25,7 @@ let
         enableSharedLibraries = false;
         enableSharedExecutables = false;
         configureFlags = [
-          "--ghc-option=-v"
+          #"--ghc-option=-v"
           "--ghc-option=-optl=-static"
           "--ghc-option=-optl=-pthread"
           "--ghc-option=-optl=-L${pkgs.glibc.static}/lib"
@@ -38,13 +38,6 @@ let
           "--ghc-option=-optl=-ldl"
           "--ghc-option=-optl=-lm"
           "--ghc-option=-optl=-lstdc++"
-          "--ghc-option=-licui18n"
-          "--ghc-option=-licuio"
-          "--ghc-option=-licuuc"
-          "--ghc-option=-licudata"
-          "--ghc-option=-ldl"
-          "--ghc-option=-lm"
-          "--ghc-option=-lstdc++"
         ];
         #librarySystemDepends = [ icu-static.static ];
         executableHaskellDepends = [ base text text-icu ];
@@ -69,20 +62,6 @@ let
           "--ghc-option=-optl=-pthread"
           "--ghc-option=-optl=-L${pkgs.glibc.static}/lib"
           "--ghc-option=-optl=-L${pkgs.gmp6.override { withStatic = true; }}/lib"
-          "--ghc-option=-optl=-licui18n"
-          "--ghc-option=-optl=-licuio"
-          "--ghc-option=-optl=-licuuc"
-          "--ghc-option=-optl=-licudata"
-          "--ghc-option=-optl=-ldl"
-          "--ghc-option=-optl=-lm"
-          "--ghc-option=-optl=-lstdc++"
-          "--ghc-option=-licui18n"
-          "--ghc-option=-licuio"
-          "--ghc-option=-licuuc"
-          "--ghc-option=-licudata"
-          "--ghc-option=-ldl"
-          "--ghc-option=-lm"
-          "--ghc-option=-lstdc++"
         ];
         librarySystemDepends = [ icu-static.dev icu-static.static ];
       });
