@@ -240,6 +240,15 @@ Cabal the order of options? And if there is, where exactly in that huge command
 above we should put it?
 
 
+## References
+
+- ICU [manual][how-to-use-icu]
+- ICU pkg-config [issue][buildroot-mailing-list]
+- Related SO [question][so-question]
+- Related GitHub issue [text-icu#39][text-icu-39]
+
 [icu]: http://site.icu-project.org/
 [how-to-use-icu]: http://userguide.icu-project.org/howtouseicu
 [buildroot-mailing-list]: http://lists.busybox.net/pipermail/buildroot/2015-May/128867.html
+[text-icu-39]: https://github.com/bos/text-icu/issues/39
+[so-question]: https://stackoverflow.com/questions/51860190/static-executable-in-haskell-depending-on-text-icu
